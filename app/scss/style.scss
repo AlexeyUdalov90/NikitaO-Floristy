@@ -2,3 +2,32 @@
 @import "core/fonts";
 
 @import "pages/index";
+
+* ,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: #E5E5E5;
+}
+
+body {
+    font-family: 'Forum', cursive;
+    background-color: #3B181E;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.header {
+    max-width: 320px;
+    display: flex;
+    padding: 15px 30px 20px 30px;
+    justify-content: space-between;
+    .header__menu-picture {
+        padding-top: 10px;
+    } 
+}
+
+
