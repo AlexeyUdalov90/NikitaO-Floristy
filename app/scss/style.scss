@@ -3,6 +3,8 @@
 
 @import "pages/index";
 
+$bg:#3B181E;
+
 * ,
 *::before,
 *::after {
@@ -10,12 +12,12 @@
 }
 
 html {
-    background: #E5E5E5;
+    background-color: #E5E5E5;
 }
 
 body {
     font-family: 'Forum', cursive;
-    background-color: #3B181E;
+    background-color: $bg;
     max-width: 320px;
     margin: 0 auto;
 }
@@ -25,9 +27,66 @@ body {
     display: flex;
     padding: 15px 30px 20px 30px;
     justify-content: space-between;
-    .header__menu-picture {
+    &__menu-picture {
         padding-top: 10px;
     } 
 }
 
+.mask-section {
+    background-image: url("../assets/images/flowers.jpg");
+    padding: 83px 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+        font-family: 'Playfair Display', serif;
+        color: #FFFFFF;
+        font-weight: normal;
+        font-size: 30px;
+        line-height: 42px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.09em;
+        margin-bottom: 35px;
+    }
+    &__button {
+        padding: 19px 36px 18px 36px;
+        border:1px solid #FFFFFF;
+        font-size: 10px;
+        line-height: 11px;
+        text-transform: uppercase;
+        color:#FFFFFF;
+        text-decoration: none;
+        background: rgba(0, 0, 0, 0.4);
+        letter-spacing: 0.15em;
+        margin-bottom: 54px;
+    }
+    &__social-list {
+        display: flex;
+        justify-content: space-around;
+        .mask-section__social-link {
+            list-style: none;
+            margin-right: 40px;
+        }
+        .mask-section__social-link a {
+            position: relative;
+            display: block;
+            width: 35px;
+            height: 35px;
+            background-color: $bg;
+            border-radius: 50%;
+            & svg {
+                position: absolute;
+                top:25%;
+                left:25%;
+            }
+            & .facebook-f {
+                position: absolute;
+                top:33%;
+                left: 43%;
+            }
+        }
+    }
+}
 
