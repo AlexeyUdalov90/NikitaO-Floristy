@@ -1,8 +1,272 @@
-h1 {
-  color: red;
-  transition: color 0.3s ease;
-  &:hover {
-    color: blue;
-    text-decoration: underline;
+* ,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $PW;
+}
+
+body {
+    font-family: 'Forum', cursive;
+    font-size: 10px;
+    line-height: 15px;
+    background-color: $PDR;
+    max-width: 320px;
+    margin: 0 auto;
+    color: $PW;
+}
+
+.header {
+    max-width: 320px;
+    display: flex;
+    padding: 15px 30px 20px 30px;
+    justify-content: space-between;
+    &__menu-picture {
+        padding-top: 10px;
+    } 
+}
+
+.mask-section {
+    background-image: url("../assets/images/flowers.jpg");
+    background-repeat: no-repeat;
+    padding: 83px 50px;
+    margin-bottom: 51px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+        font-family: 'Playfair Display', serif;
+        font-weight: normal;
+        color:$PW;
+        font-size: 30px;
+        line-height: 42px;
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 0.09em;
+        margin-bottom: 35px;
+    }
+    &__button {
+        padding: 19px 36px 18px 36px;
+        border:1px solid $PW;
+        font-size: 10px;
+        line-height: 11px;
+        text-transform: uppercase;
+        color:$PW;
+        text-decoration: none;
+        background: rgba(0, 0, 0, 0.4);
+        letter-spacing: 0.15em;
+        margin-bottom: 60px;
+    }
+    &__social-list {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 30px;
+        .mask-section__social-link {
+            list-style: none;
+            margin-right: 40px;
+        }
+        .mask-section__social-link a {
+            position: relative;
+            display: block;
+            width: 35px;
+            height: 35px;
+            background-color: $PDR;
+            border-radius: 50%;
+            & svg {
+                position: absolute;
+                top:25%;
+                left:25%;
+            }
+            & .facebook-f {
+                position: absolute;
+                top:33%;
+                left: 43%;
+            }
+        }
+    }
+ 
+}
+
+.catalog-section {
+    padding: 0 17px 0 15px;
+    margin-bottom: 100px;
+    &__title {
+        font-size: 20px;
+        line-height: 34px;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: $PW;
+        letter-spacing: 0.06em;
+        margin-bottom: 20px;
+    }
+    &__slider {
+        position: relative;
+        width: 288px;
+        height: 415px;
+        input[type="radio"] {
+            display: none;
+        }
+        .slides {
+            position: relative;
+            width: inherit;
+            height: 392px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            .slide {
+                position: absolute;
+                width: inherit;
+                height: inherit;
+                padding: 12px 15px 15px 20px;
+                opacity: 0;
+                z-index: 0;
+                &__title {
+                    margin-bottom: 277px;
+                    hr {
+                    display: inline-block;
+                    width: 70px;
+                    border: 1px solid $PW;
+                    margin-right: 8px;
+                    }
+                    span {
+                        font-size: 20px;
+                        line-height: 22px;
+                        text-transform: uppercase;       
+                    }
+                }   
+                &__text {
+                    font-size: 16px;
+                    line-height: 27px;
+                    letter-spacing: 0.1em;
+                    opacity: 0.9;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .slide_1 {
+            background: url("../assets/images/bouquet1.jpg") no-repeat;
+            background-size: contain;
+        }
+        .slide_2 {
+            background-image: url("../assets/images/bouquet2.jpg");
+        }
+        .slide_3 {
+            background-image: url("../assets/images/bouquet3.jpg");
+        }
+        .slide_4 {
+            background-image: url("../assets/images/bouquet4.jpg");
+        }
+        .catalog-section__controls {
+            display: flex;
+            justify-content: center;
+            .catalog-section__control {
+                width: 62.6px;
+                height: 3px;
+                background-color: rgba(255, 255, 255, 0.3);
+                margin-right: 12.5px;
+                &:last-of-type {
+                    margin-right: 0;
+                }
+                &:hover {
+                    background-color: $PW;
+                }
+            }
+        }
+        #slide-1:checked ~ .catalog-section__controls label:nth-of-type(1),
+        #slide-2:checked ~ .catalog-section__controls label:nth-of-type(2),
+        #slide-3:checked ~ .catalog-section__controls label:nth-of-type(3),
+        #slide-4:checked ~ .catalog-section__controls label:nth-of-type(4){
+        background: $PW;
+        }
+        #slide-1:checked ~ .slides > .slide_1,
+        #slide-2:checked ~ .slides > .slide_2,
+        #slide-3:checked ~ .slides > .slide_3,
+        #slide-4:checked ~ .slides > .slide_4 {
+	        opacity: 1;
+	        z-index: 1;
+        }
+    }
+}
+
+.promo {
+  padding:0 16px;
+  overflow: hidden;
+  &__image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 4px;
+  }
+  &__title {
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: normal;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  & > hr {
+    display: inline-block;
+    width: 83px;
+    border:1px solid $PW;
+    font-size: 0px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 40px;
+  }
+  &__button {
+    background-color: #010001;
+    color:$PW;
+    border: none;
+    padding: 20px 41px 18px 31px;
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 95px;
+  }
+}
+
+.footer {
+  padding:0 17px 30px 15px;
+  & > hr {
+    display: inline-block;
+    width: 288px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 46px;
+    padding-left: 0px;
+  }
+  &__menu-item {
+    list-style: none;
+    margin-bottom: 11px;
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+    & a {
+      text-decoration: none;
+      color:rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+      line-height: 18px;
+    }
+  }
+  &__social-list {
+    display: flex;
+    justify-content:center;
+  }
+  &__social-link {
+    list-style: none;
+    & a {
+      width: 25px;
+      height: 25px;
+      margin-right: 50px;
+    }
   }
 }
