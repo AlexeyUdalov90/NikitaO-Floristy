@@ -18,7 +18,7 @@
   </header>
   <main>
     <section class="mask-section">
-      <h1 class="mask-section__title">флористика с душой</h1>
+      <h1 class="mask-section__title">Флористика с душой</h1>
       <a href="#" class="mask-section__button">смотреть работы</a>
       <ul class="mask-section__social-list">
         <li class="mask-section__social-link">
@@ -57,17 +57,57 @@
           </a>
         </li>
       </ul>
+      <div class="mask-section__arrow-link" href="#">
+      <a class="mask-section__arrow-link" href="#">
+        <svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 19.9014L1.19672 13.9887M7 19.9014L12.7973 14.2141M7 19.9014L7.17941 0.92916" stroke="white"/>
+        </svg>
+      </a>
     </section>
     <section class="catalog-section">
       <h2 class="catalog-section__title">каталог услуг</h2>
-      <div class="catalog-section__card card">
-        <h3 class="card__title">
-          <hr>
-          <span>01</span>
-        </h3>
-        <p class="card__text">букет невесты и свадебное оформление</p>
+      <div class="catalog-section__slider">
+        <input class="catalog-section__input" type="radio" name="point" id="slide-1" checked>
+        <input class="catalog-section__input" type="radio" name="point" id="slide-2">
+        <input class="catalog-section__input" type="radio" name="point" id="slide-3">
+        <input class="catalog-section__input" type="radio" name="point" id="slide-4">
+        <div class="slides">
+          <div class="catalog-section__slide slide slide_1">
+            <h3 class="slide__title">
+              <hr>
+              <span>01</span>
+            </h3>
+            <p class="slide__text">букет невесты и свадебное оформление</p>
+          </div>
+          <div class="catalog-section__slide slide slide_2">
+            <h3 class="slide__title">
+              <hr>
+              <span>02</span>
+            </h3>
+            <p class="slide__text">букеты на торжества</p>
+          </div>
+          <div class="catalog-section__slide slide slide_3">
+            <h3 class="slide__title">
+              <hr>
+              <span>03</span>
+            </h3>
+            <p class="slide__text">композиции</p>
+          </div>
+          <div class="catalog-section__slide slide slide_4">
+            <h3 class="slide__title">
+              <hr>
+              <span>04</span>
+            </h3>
+            <p class="slide__text">оформление мероприятий</p>
+          </div>
+        </div>
+        <div class="catalog-section__controls">
+          <label class="catalog-section__control" for="slide-1"></label>
+          <label class="catalog-section__control" for="slide-2"></label>
+          <label class="catalog-section__control" for="slide-3"></label>
+          <label class="catalog-section__control" for="slide-4"></label>
+        </div>
       </div>
-      
     </section>
   </main>
   <script src="js/vendors.js"></script>
