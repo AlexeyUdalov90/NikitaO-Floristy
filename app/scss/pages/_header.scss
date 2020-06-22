@@ -1,0 +1,8 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px 20px 30px;
+    &__menu-picture {
+        padding-top: 10px;
+    }
+}

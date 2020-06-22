@@ -1,82 +1,71 @@
-* ,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 html {
     background-color: $PW;
 }
 
 body {
+    max-width: 1920px;
+    margin: 0 auto;
+
     font-family: 'Forum', cursive;
     font-size: 10px;
     line-height: 15px;
-    background-color: $PDR;
-    max-width: 1920px;
-    margin: 0 auto;
     color: $PW;
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.header {
-    display: flex;
-    padding: 15px 30px 20px 30px;
-    justify-content: space-between;
-    &__menu-picture {
-        padding-top: 10px;
-    } 
+    background-color: $PDR;
 }
 
 .mask-section {
-    background-image: url("../assets/images/flowers.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    padding: 83px 50px;
-    margin-bottom: 51px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 51px;
+    padding: 83px 50px;
+
+    background-image: url("../assets/images/flowers.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
     &__title {
+        margin-bottom: 35px;
+
         font-family: 'Playfair Display', serif;
         font-weight: normal;
-        color:$PW;
         font-size: 30px;
         line-height: 42px;
+        color:$PW;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.09em;
-        margin-bottom: 35px;
     }
     &__button {
+        margin-bottom: 60px;
         padding: 19px 36px 18px 36px;
-        border:1px solid $PW;
+
         font-size: 10px;
         line-height: 11px;
         text-transform: uppercase;
         color:$PW;
         text-decoration: none;
-        background: rgba(0, 0, 0, 0.4);
         letter-spacing: 0.15em;
-        margin-bottom: 60px;
+
+        border:1px solid $PW;
+        background: rgba(0, 0, 0, 0.4);
     }
     &__social-list {
         display: flex;
         justify-content: space-around;
         margin-bottom: 30px;
         .mask-section__social-link {
-            list-style: none;
             margin-right: 40px;
+
+            list-style: none;
         }
         .mask-section__social-link a {
             position: relative;
+
             display: block;
             width: 35px;
             height: 35px;
+
             background-color: $PDR;
             border-radius: 50%;
             & svg {
@@ -91,26 +80,27 @@ img {
             }
         }
     }
- 
 }
 
 .catalog-section {
-    padding: 0 17px 0 15px;
-    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
+    padding: 0 17px 0 15px;
     &__title {
+        margin-bottom: 20px;
+
         font-size: 20px;
         line-height: 34px;
         font-weight: normal;
         text-transform: uppercase;
-        color: $PW;
         letter-spacing: 0.06em;
-        margin-bottom: 20px;
+        color: $PW;
     }
     &__slider {
         position: relative;
+
         max-width: 340px;
         height: 415px;
         input[type="radio"] {
@@ -118,37 +108,43 @@ img {
         }
         .slides {
             position: relative;
+
             width: 100%;
             height: 392px;
-            overflow: hidden;
             margin-bottom: 20px;
+
+            overflow: hidden;
             .slide {
                 position: absolute;
+                z-index: 0;
+
                 width: inherit;
                 height: inherit;
                 padding: 12px 15px 15px 20px;
+
                 opacity: 0;
-                z-index: 0;
                 &__title {
                     margin-bottom: 277px;
                     hr {
-                    display: inline-block;
-                    width: 70px;
-                    border: 1px solid $PW;
-                    margin-right: 8px;
+                        display: inline-block;
+                        width: 70px;
+                        margin-right: 8px;
+
+                        border: 1px solid $PW;
                     }
                     span {
                         font-size: 20px;
                         line-height: 22px;
-                        text-transform: uppercase;       
+                        text-transform: uppercase;
                     }
                 }   
                 &__text {
                     font-size: 16px;
                     line-height: 27px;
                     letter-spacing: 0.1em;
-                    opacity: 0.9;
                     text-transform: uppercase;
+
+                    opacity: 0.9;
                 }
             }
         }
@@ -170,8 +166,9 @@ img {
             .catalog-section__control {
                 width: 62.6px;
                 height: 3px;
-                background-color: rgba(255, 255, 255, 0.3);
                 margin-right: 12.5px;
+
+                background-color: rgba(255, 255, 255, 0.3);
                 &:last-of-type {
                     margin-right: 0;
                 }
@@ -198,82 +195,47 @@ img {
 
 .promo {
   padding:0 16px;
+
   overflow: hidden;
   &__image {
-    margin-bottom: 4px;
     width: 100%;
     max-width: 453px;
+    margin-bottom: 4px;
   }
   &__title {
+    margin-bottom: 10px;
+
     font-size: 20px;
     line-height: 34px;
     font-weight: normal;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-bottom: 10px;
   }
   & > hr {
     display: inline-block;
     width: 83px;
-    border:1px solid $PW;
+
     font-size: 0px;
+
+    border:1px solid $PW;
   }
   &__text {
+    margin-bottom: 40px;
+
     font-size: 14px;
     line-height: 24px;
-    margin-bottom: 40px;
   }
   &__button {
-    background-color: #010001;
-    color:$PW;
-    border: none;
+    margin-bottom: 95px;
     padding: 20px 41px 18px 31px;
+
     font-size: 11px;
     line-height: 12px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    margin-bottom: 95px;
-  }
-}
+    color:$PW;
 
-.footer {
-  padding:0 17px 30px 15px;
-  & > hr {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-  }
-  &__menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 46px;
-    padding-left: 0px;
-  }
-  &__menu-item {
-    list-style: none;
-    margin-bottom: 11px;
-    &:last-of-type {
-      margin-bottom: 0px;
-    }
-    & a {
-      text-decoration: none;
-      color:rgba(255, 255, 255, 0.5);
-      font-size: 16px;
-      line-height: 18px;
-    }
-  }
-  &__social-list {
-    display: flex;
-    justify-content:center;
-  }
-  &__social-link {
-    list-style: none;
-    & a {
-      width: 25px;
-      height: 25px;
-      margin-right: 50px;
-    }
+    background-color: #010001;
+    border: none;
   }
 }
