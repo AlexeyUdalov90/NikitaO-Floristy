@@ -26,8 +26,8 @@ body {
     background-size: 100%;
 
     @media (min-width:768px) {
-        margin-bottom: 20px;
-        padding:284px 100px 131px 101px;
+        margin-bottom: 95px;
+        padding:284px 100px 55px 101px;
 
         background-image: url("../../images/flowers_ipad.jpg");
     }
@@ -134,11 +134,8 @@ body {
 }
 
 .catalog-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px;
-    padding: 0 17px 0 15px;
+    padding: 0 16px;
+    margin-bottom: 95px;
     &__title {
         margin-bottom: 20px;
 
@@ -147,99 +144,70 @@ body {
         font-weight: normal;
         text-transform: uppercase;
         letter-spacing: 0.06em;
-        color: $PW;
     }
     &__slider {
-        position: relative;
+        display: flex;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-width: 288px;
+        min-height: 392px;
+        max-width: 330px;
+        max-height: 450px;
+        padding: 23px 0 0 20px;
+        margin-bottom: 15px;
+        &__title hr {
+            display: inline-block;
+            width: 70px;
+            margin-right: 8px;
 
-        max-width: 340px;
-        height: 415px;
-        input[type="radio"] {
-            display: none;
+            border:1px solid $PW;
         }
-        .slides {
-            position: relative;
+        &__title span {
+            font-size: 20px;
+            line-height: 22px;
+            text-transform: uppercase;
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 27px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.9;
+        }
+        &:nth-of-type(1) {
+            background: url("../../images/bouquet1.jpg") no-repeat;
+            background-size: cover;
+        }
+        &:nth-of-type(2) {
+            background: url("../../images/bouquet2.jpg") no-repeat;
+            background-size: contain;
+        }
+        &:nth-of-type(3) {
+            background: url("../../images/bouquet3.jpg") no-repeat;
+            background-size: contain;
+        }
+        &:nth-of-type(4) {
+            background: url("../../images/bouquet4.jpg") no-repeat;
+            background-size: contain;
+        }
+    }
+    &__controls {
+        display: flex;
+        max-width: 330px;
+        hr {
+            width: 62.61px;
+            margin-right: 12.52px;
 
-            width: 100%;
-            height: 392px;
-            margin-bottom: 20px;
-
-            overflow: hidden;
-            .slide {
-                position: absolute;
-                z-index: 0;
-
-                width: inherit;
-                height: inherit;
-                padding: 12px 15px 15px 20px;
-
-                opacity: 0;
-                &__title {
-                    margin-bottom: 277px;
-                    hr {
-                        display: inline-block;
-                        width: 70px;
-                        margin-right: 8px;
-
-                        border: 1px solid $PW;
-                    }
-                    span {
-                        font-size: 20px;
-                        line-height: 22px;
-                        text-transform: uppercase;
-                    }
-                }   
-                &__text {
-                    font-size: 16px;
-                    line-height: 27px;
-                    letter-spacing: 0.1em;
-                    text-transform: uppercase;
-
-                    opacity: 0.9;
-                }
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            &:last-of-type {
+                margin-right: 0px;
             }
-        }
-        .slide_1 {
-            background: url("../assets/images/bouquet1.jpg") no-repeat;
-        }
-        .slide_2 {
-            background-image: url("../assets/images/bouquet2.jpg");
-        }
-        .slide_3 {
-            background-image: url("../assets/images/bouquet3.jpg");
-        }
-        .slide_4 {
-            background-image: url("../assets/images/bouquet4.jpg");
-        }
-        .catalog-section__controls {
-            display: flex;
-            justify-content: center;
-            .catalog-section__control {
-                width: 62.6px;
-                height: 3px;
-                margin-right: 12.5px;
-
-                background-color: rgba(255, 255, 255, 0.3);
-                &:last-of-type {
-                    margin-right: 0;
-                }
-                &:hover {
-                    background-color: $PW;
-                }
+            &:hover {
+                border-color: $PW;
             }
-        }
-        #slide-1:checked ~ .catalog-section__controls label:nth-of-type(1),
-        #slide-2:checked ~ .catalog-section__controls label:nth-of-type(2),
-        #slide-3:checked ~ .catalog-section__controls label:nth-of-type(3),
-        #slide-4:checked ~ .catalog-section__controls label:nth-of-type(4){
-        background: $PW;
-        }
-        #slide-1:checked ~ .slides > .slide_1,
-        #slide-2:checked ~ .slides > .slide_2,
-        #slide-3:checked ~ .slides > .slide_3,
-        #slide-4:checked ~ .slides > .slide_4 {
-	        opacity: 1;
-	        z-index: 1;
         }
     }
 }
