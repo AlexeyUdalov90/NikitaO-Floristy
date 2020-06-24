@@ -11,9 +11,12 @@
 </head>
 <body>
   <header class="header">
-    <img class="header__logo" src="/images/logo.svg" alt="Логотип">
+    <img class="header__logo" 
+         srcset="images/logo.svg 320w , images/logo_ipad.svg 768w" 
+         sizes="(max-width:650px) 470px, 768px" 
+         alt="Логотип">
     <nav class="header__menu">
-      <img class="header__menu-picture" src="/images/burger.svg" alt="Показать меню">
+      <div class="header__menu-burger"></div>
     </nav>
   </header>
   <main>
@@ -57,7 +60,6 @@
           </a>
         </li>
       </ul>
-      <div class="mask-section__arrow-link" href="#">
       <a class="mask-section__arrow-link" href="#">
         <svg width="14" height="21" viewBox="0 0 14 21" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7 19.9014L1.19672 13.9887M7 19.9014L12.7973 14.2141M7 19.9014L7.17941 0.92916" stroke="white"/>

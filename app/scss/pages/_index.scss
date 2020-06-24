@@ -21,9 +21,16 @@ body {
     margin-bottom: 51px;
     padding: 83px 50px;
 
-    background-image: url("../assets/images/flowers.jpg");
+    background-image: url("../../images/flowers.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
+
+    @media (min-width:768px) {
+        margin-bottom: 20px;
+        padding:284px 100px 131px 101px;
+
+        background-image: url("../../images/flowers_ipad.jpg");
+    }
     &__title {
         margin-bottom: 35px;
 
@@ -35,6 +42,14 @@ body {
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.09em;
+
+        @media (min-width:768px) {
+            margin-bottom: 82px;
+
+            font-family: 'Forum', cursive;
+            font-size: 70px;
+            line-height: 77px;
+        }
     }
     &__button {
         margin-bottom: 60px;
@@ -49,15 +64,31 @@ body {
 
         border:1px solid $PW;
         background: rgba(0, 0, 0, 0.4);
+
+        @media (min-width:768px) {
+            margin-bottom: 200px;
+            padding: 22px 50px 19px 50px;
+
+            font-size: 15px;
+            line-height: 17px;
+        }
     }
     &__social-list {
         display: flex;
         justify-content: space-around;
         margin-bottom: 30px;
+        @media (min-width:768px) {
+            margin-bottom: 34px;
+            margin-left: 37px;    // Из-за флекса элементы встают левее, не придумал ничего лучше..
+        }
         .mask-section__social-link {
             margin-right: 40px;
 
             list-style: none;
+
+            @media (min-width:768px) {
+                margin-right: 80px;
+            }
         }
         .mask-section__social-link a {
             position: relative;
@@ -68,16 +99,36 @@ body {
 
             background-color: $PDR;
             border-radius: 50%;
+
+            @media (min-width:768px) {
+                width: 55px;
+                height: 55px;
+            }
             & svg {
                 position: absolute;
                 top:25%;
                 left:25%;
+
+                @media (min-width:768px) {
+                    width: 29px;
+                    height: 29px;
+                }
             }
             & .facebook-f {
                 position: absolute;
                 top:33%;
                 left: 43%;
+                @media (min-width:768px) {
+                    width: 9px;
+                    height: 20px;
+                }
             }
+        }
+    }
+    &__arrow-link svg {
+        @media (min-width:768px) {
+            width: 30px;
+            height: auto;
         }
     }
 }
