@@ -135,7 +135,7 @@ body {
 
 .catalog-section {
     padding: 0 17px 0 15px;
-    margin-bottom: 95px;
+    margin-bottom: 94px;
     @media (min-width:768px) {
         padding:0 40px;
     }
@@ -278,12 +278,23 @@ body {
 
 .promo {
   padding:0 16px;
-
   overflow: hidden;
+
+  @media (min-width:390px) {
+      max-width: 485px;
+      margin: 0 auto;
+  }
+  @media (min-width:768px) {
+      padding:0 0 0 30px;
+  }
   &__image {
     width: 100%;
     max-width: 453px;
+    
     margin-bottom: 4px;
+    @media (min-width:768px) {
+        margin-bottom: 1px;
+    }
   }
   &__title {
     margin-bottom: 10px;
@@ -293,6 +304,16 @@ body {
     font-weight: normal;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media (min-width:768px) {
+        font-size: 30px;
+        line-height: 51px;
+        text-align: center;
+        text-transform: uppercase;
+        br {
+            display: none;
+        }
+    }
   }
   & > hr {
     display: inline-block;
