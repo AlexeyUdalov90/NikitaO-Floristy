@@ -107,14 +107,20 @@
       </div>
     </section>
     <section class="promo">
-      <img class="promo__image" 
-      srcset="images/promo-picture.jpg 320w , images/promo-picture_ipad.jpg 768h" 
-      sizes="(max-width:650px) 470px, 768px" 
-      alt="Промо картинка">
-      <h2 class="promo__title">акционные <br> предложения</h2>
-      <hr>
-      <p class="promo__text">При заказе свадебного оформления предоставляется скидка на букет невесты и бутоньерку в размере 30%</p>
-      <button class="promo__button" type="submit">заказать оформление</button>
+      <div class="promo__picture">
+        <img class="promo__image" 
+             srcset="images/promo-picture.jpg 288w, 
+              images/promo-picture_ipad.jpg 453w" 
+             sizes="(max-width:320px) 288px, 
+             (min-width:768px) 453px"
+             alt="Промо картинка">
+      </div>
+      <div class="promo__content">
+        <h2 class="promo__title">акционные предложения</h2>
+        <hr>
+        <p class="promo__text">При заказе свадебного оформления предоставляется скидка на букет невесты и бутоньерку в размере 30%</p>
+        <button class="promo__button" type="submit">заказать оформление</button>
+      </div>
     </section>
   </main>
   <footer class="footer">
