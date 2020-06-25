@@ -77,6 +77,7 @@ body {
         display: flex;
         justify-content: space-around;
         margin-bottom: 30px;
+
         @media (min-width:768px) {
             margin-bottom: 34px;
             margin-left: 37px;    // Из-за флекса элементы встают левее, не придумал ничего лучше..
@@ -136,6 +137,7 @@ body {
 .catalog-section {
     padding: 0 17px 0 15px;
     margin-bottom: 95px;
+
     @media (min-width:768px) {
         padding:0 40px;
     }
@@ -152,6 +154,7 @@ body {
             margin:0 auto 20px auto;
             text-align: center;
         }
+
         @media (min-width:768px) {
             font-size: 30px;
             line-height: 33px;
@@ -159,6 +162,7 @@ body {
     }
     & > hr {
         display: none;
+
         @media (min-width:768px) {
             position: relative;
             left:-13px;
@@ -183,12 +187,13 @@ body {
         min-width: 288px;
         min-height: 392px;
         max-width: 330px;
-        padding: 23px 0 0 20px;
         margin-bottom: 15px;
+        padding: 23px 0 0 20px;
         
         @media (min-width:390px) {
             margin: 0 auto 15px auto;
         }
+
         @media (min-width:768px) {
             margin: 0 28px 24px 0;
             padding-top: 42px;
@@ -198,12 +203,14 @@ body {
             display:flex;
             align-items: center;
             width: 97px;
+
             @media (min-width:768px) {
                 flex-direction: row-reverse;
             }
             hr {
             width: 70px;
             margin-right: 8px;
+
             @media (min-width:768px) {
                 margin-right:0;
                 margin-left:8px;
@@ -229,9 +236,11 @@ body {
             background-size: cover;
         }
         &:nth-of-type(2) {
+            display: none;
+
             background: url("../../images/bouquet2.jpg") no-repeat;
             background-size: cover;
-            display: none;
+
             @media (min-width:768px) {
                 display: flex;
                 width: 100%;
@@ -239,19 +248,22 @@ body {
             }
         }
         &:nth-of-type(3) {
+            display: none;
+
             background: url("../../images/bouquet3.jpg") no-repeat;
             background-size: cover;
-            display: none;
         }
         &:nth-of-type(4) {
+            display: none;
+
             background: url("../../images/bouquet4.jpg") no-repeat;
             background-size: cover;
-            display: none;
         }
     }
     &__controls {
         display: flex;
         max-width: 330px;
+
         @media (min-width:390px) {
             margin: 0 auto;
         }
@@ -265,6 +277,7 @@ body {
         hr {
             width: 62.61px;
             margin-right: 12.52px;
+
             border: 2px solid rgba(255, 255, 255, 0.3);
             &:last-of-type {
                 margin-right:0;
@@ -289,11 +302,11 @@ body {
   }
   &__picture {
       font-size: 0px;
-      margin-bottom: 1px;
     }
   &__image {
     width: 288px; // временно, чтобы весь макет ниже картинки не поехал
-    height:170px; 
+    height:170px;
+
     @media (min-width:768px) {
         width: 100%;
         height: 323px; //тоже временно, чтобы на планшете было +- ок
@@ -305,6 +318,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+
       @media (min-width:768px) {
           align-items: center;
       }
@@ -364,5 +378,9 @@ body {
 
     background-color: #010001;
     border: none;
+
+    @media (min-width:768px) {
+        margin-bottom: 90px;
+    }
   }
 }
