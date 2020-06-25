@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 30px 20px 30px;
+
+    overflow: hidden;
+    
+    @media (min-width:768px) {
+        padding: 38px 50px 0px 50px;
+    }
+    &__menu-burger {
+        padding-top: 10px;
+
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 32%; //Как тебе такое решение? (в % указать) Крайне неустойчиво к изменению контента, но зато тянется, мне кажется не лучшее.
+            left: 89%;
+        }
+        &::before , &::after {
+            content: "";
+            display: block;
+            width: 37px;
+            height:1px;
+
+            background-color: $PW;
+        }
+        &::after {
+            margin-top: 10px;
+        }
+    }
+    @media (min-width: 768px) {
+        position: absolute;
+    }
+}
