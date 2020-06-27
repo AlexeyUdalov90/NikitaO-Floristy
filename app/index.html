@@ -16,7 +16,7 @@
     <img class="header__logo" srcset="images/logo.svg 320w , images/logo_ipad.svg 768w"
       sizes="(max-width:650px) 470px, 768px" alt="Логотип">
     <nav class="header__menu">
-      <button class="header__menu-burger"></button>
+      <button class="header__menu-burger">меню</button>
     </nav>
   </header>
   <main>
@@ -117,9 +117,12 @@
     </section>
     <section class="promo">
       <div class="promo__picture">
-        <img class="promo__image" srcset="images/promo-picture.jpg 288w,
-              images/promo-picture_ipad.jpg 453w" sizes="(max-width:320px) 288px,
-             (min-width:768px) 453px" alt="Промо картинка">
+        <picture class="promo__image">
+          <source srcset="../images/promo-picture.jpg" type="image/jpeg" media="(max-width:767px)">
+          <source srcset="../images/promo-picture_ipad.jpg" type="image/jpeg" media="(max-width:899px)">
+          <source srcset="../images/promo-picture_desktop.jpg" type="image/jpeg" media="(min-width:900px)">
+          <img src="../images/promo-picture.jpg" alt="Промо картинка">
+        </picture>
       </div>
       <div class="promo__content">
         <h2 class="promo__title">акционные предложения</h2>
