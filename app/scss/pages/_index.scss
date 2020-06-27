@@ -1,36 +1,37 @@
 html {
-    background-color: $PW;
+    background-color: $font-color;
 }
 
 body {
-    max-width: 1920px;
     margin: 0 auto;
+    max-width: 1920px;
 
     font-family: 'Forum', cursive;
     font-size: 10px;
     line-height: 15px;
-    color: $PW;
+    color: $font-color;
 
-    background-color: $PDR;
+    background-color: $page-color;
 }
 
 .mask-section {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 51px;
     padding: 83px 50px;
 
-    background-image: url("../../images/flowers.jpg");
+    background-image: url("../images/flowers.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
 
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
         margin-bottom: 95px;
-        padding:284px 100px 55px 101px;
+        padding: 284px 100px 55px 101px;
 
-        background-image: url("../../images/flowers_ipad.jpg");
+        background-image: url("../images/flowers_ipad.jpg");
     }
+
     &__title {
         margin-bottom: 35px;
 
@@ -38,12 +39,12 @@ body {
         font-weight: normal;
         font-size: 30px;
         line-height: 42px;
-        color:$PW;
+        color: $font-color;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.09em;
 
-        @media (min-width:768px) {
+        @media (min-width: 768px) {
             margin-bottom: 82px;
 
             font-family: 'Forum', cursive;
@@ -51,6 +52,7 @@ body {
             line-height: 77px;
         }
     }
+
     &__button {
         margin-bottom: 60px;
         padding: 19px 36px 18px 36px;
@@ -58,14 +60,14 @@ body {
         font-size: 10px;
         line-height: 11px;
         text-transform: uppercase;
-        color:$PW;
+        color: $font-color;
         text-decoration: none;
         letter-spacing: 0.15em;
 
-        border:1px solid $PW;
+        border: 1px solid $font-color;
         background: rgba(0, 0, 0, 0.4);
 
-        @media (min-width:768px) {
+        @media (min-width: 768px) {
             margin-bottom: 200px;
             padding: 22px 50px 19px 50px;
 
@@ -73,24 +75,27 @@ body {
             line-height: 17px;
         }
     }
+
     &__social-list {
         display: flex;
         justify-content: space-around;
         margin-bottom: 30px;
+        padding: 0;
 
-        @media (min-width:768px) {
+        @media (min-width: 768px) {
             margin-bottom: 34px;
-            margin-left: 37px;    // Из-за флекса элементы встают левее, не придумал ничего лучше..
         }
+
         .mask-section__social-link {
-            margin-right: 40px;
+            margin: 0 20px;
 
             list-style: none;
 
-            @media (min-width:768px) {
-                margin-right: 80px;
+            @media (min-width: 768px) {
+                margin: 0 40px;
             }
         }
+
         .mask-section__social-link a {
             position: relative;
 
@@ -98,36 +103,40 @@ body {
             width: 35px;
             height: 35px;
 
-            background-color: $PDR;
+            background-color: $page-color;
             border-radius: 50%;
 
-            @media (min-width:768px) {
+            @media (min-width: 768px) {
                 width: 55px;
                 height: 55px;
             }
+
             & svg {
                 position: absolute;
-                top:25%;
-                left:25%;
+                top: 25%;
+                left: 25%;
 
-                @media (min-width:768px) {
+                @media (min-width: 768px) {
                     width: 29px;
                     height: 29px;
                 }
             }
+
             & .facebook-f {
                 position: absolute;
-                top:33%;
+                top: 33%;
                 left: 43%;
-                @media (min-width:768px) {
+
+                @media (min-width: 768px) {
                     width: 9px;
                     height: 20px;
                 }
             }
         }
     }
+
     &__arrow-link svg {
-        @media (min-width:768px) {
+        @media (min-width: 768px) {
             width: 30px;
             height: auto;
         }
@@ -135,12 +144,13 @@ body {
 }
 
 .catalog-section {
-    padding: 0 17px 0 15px;
     margin-bottom: 95px;
+    padding: 0 17px 0 15px;
 
-    @media (min-width:768px) {
-        padding:0 40px;
+    @media (min-width: 768px) {
+        padding: 0 40px;
     }
+
     &__title {
         margin-bottom: 20px;
 
@@ -150,237 +160,263 @@ body {
         text-transform: uppercase;
         letter-spacing: 0.06em;
 
-        @media (min-width:390px) {
-            margin:0 auto 20px auto;
+        @media (min-width: 390px) {
+            margin: 0 auto 20px auto;
             text-align: center;
         }
 
-        @media (min-width:768px) {
+        @media (min-width: 768px) {
             font-size: 30px;
             line-height: 33px;
         }
     }
-    & > hr {
+
+    &>hr {
         display: none;
 
-        @media (min-width:768px) {
+        @media (min-width: 768px) {
             position: relative;
-            left:-13px;
-            
+            left: -13px;
+
             display: block;
             width: 83.5px;
             margin-bottom: 30px;
 
-            border: 1px solid $PW;
+            border: 1px solid $font-color;
         }
     }
 
     &__slider {
         display: flex;
         justify-content: space-between;
+
         overflow: hidden;
     }
-    .card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-width: 288px;
-        min-height: 392px;
-        max-width: 330px;
-        margin-bottom: 15px;
-        padding: 23px 0 0 20px;
-        
-        @media (min-width:390px) {
-            margin: 0 auto 15px auto;
-        }
 
-        @media (min-width:768px) {
-            margin: 0 28px 24px 0;
-            padding-top: 42px;
-            height: 450px;
-        }
-        &__title {
-            display:flex;
-            align-items: center;
-            width: 97px;
-
-            @media (min-width:768px) {
-                flex-direction: row-reverse;
-            }
-            hr {
-            width: 70px;
-            margin-right: 8px;
-
-            @media (min-width:768px) {
-                margin-right:0;
-                margin-left:8px;
-            }
-
-            border:1px solid $PW;
-            }
-            span {
-            font-size: 20px;
-            line-height: 22px;
-            text-transform: uppercase;
-            }
-        }
-        &__text {
-            font-size: 16px;
-            line-height: 27px;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            opacity: 0.9;
-        }
-        &:nth-of-type(1) {
-            background: url("../../images/bouquet1.jpg") no-repeat;
-            background-size: cover;
-        }
-        &:nth-of-type(2) {
-            display: none;
-
-            background: url("../../images/bouquet2.jpg") no-repeat;
-            background-size: cover;
-
-            @media (min-width:768px) {
-                display: flex;
-                width: 100%;
-                margin-right: 0;
-            }
-        }
-        &:nth-of-type(3) {
-            display: none;
-
-            background: url("../../images/bouquet3.jpg") no-repeat;
-            background-size: cover;
-        }
-        &:nth-of-type(4) {
-            display: none;
-
-            background: url("../../images/bouquet4.jpg") no-repeat;
-            background-size: cover;
-        }
-    }
     &__controls {
         display: flex;
         max-width: 330px;
 
-        @media (min-width:390px) {
+        @media (min-width: 390px) {
             margin: 0 auto;
         }
-        @media (min-width:768px) {
-            width:170px;
+
+        @media (min-width: 768px) {
+            width: 170px;
+
             hr:nth-of-type(3),
             hr:nth-of-type(4) {
                 display: none;
             }
         }
+
         hr {
-            width: 62.61px;
             margin-right: 12.52px;
+            width: 62.61px;
 
             border: 2px solid rgba(255, 255, 255, 0.3);
+
             &:last-of-type {
-                margin-right:0;
+                margin-right: 0;
             }
+
             &:hover {
-                border-color: $PW;
+                border-color: $font-color;
             }
         }
     }
 }
 
-.promo {
-  padding:0 16px;
-  overflow: hidden;
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 23px 0 0 20px;
+    min-width: 288px;
+    min-height: 392px;
+    max-width: 330px;
 
-  @media (min-width:390px) {
-      max-width: 485px;
-      margin: 0 auto;
-  }
-  @media (min-width:768px) {
-      padding:0 0 0 30px;
-  }
-  &__picture {
-      font-size: 0px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (min-width: 390px) {
+        margin: 0 auto 15px auto;
     }
-  &__image {
-    width: 288px; // временно, чтобы весь макет ниже картинки не поехал
-    height:170px;
 
-    @media (min-width:768px) {
-        width: 100%;
-        height: 323px; //тоже временно, чтобы на планшете было +- ок
+    @media (min-width: 768px) {
+        margin: 0 28px 24px 0;
+        padding-top: 42px;
+        height: 450px;
     }
-  }
-  &__content {
-      position: relative;
 
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    &__title {
+        display: flex;
+        align-items: center;
+        width: 97px;
 
-      @media (min-width:768px) {
-          align-items: center;
-      }
-  }
-  &__title {
-      width: 200px;
-      margin-bottom: 26px;
+        @media (min-width: 768px) {
+            flex-direction: row-reverse;
+        }
 
-      font-size: 20px;
-      line-height: 34px;
-      font-weight: normal;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
+        hr {
+            width: 70px;
+            margin-right: 8px;
 
-      @media (min-width:768px) {
-          width:auto;
-          margin-bottom:37px;
+            @media (min-width: 768px) {
+                margin-right: 0;
+                margin-left: 8px;
+            }
 
-          font-size: 30px;
-          line-height: 51px;
-      }
-  }
-  &__content hr {
-    position: absolute;
-    top:103px;
-    
-    width:83px;
+            border:1px solid $font-color;
+        }
 
-    font-size: 0px;
+        span {
+            font-size: 20px;
+            line-height: 22px;
+            text-transform: uppercase;
+        }
+    }
 
-    @media (min-width:768px) {
-        width:85.5px;
-        top:86px;
+    &__text {
+        font-size: 16px;
+        line-height: 27px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        opacity: 0.9;
+    }
+
+    &:nth-of-type(1) {
+        background-image: url("../images/bouquet1.jpg");
+    }
+
+    &:nth-of-type(2) {
+        display: none;
+
+        background-image: url("../images/bouquet2.jpg");
+
+        @media (min-width: 768px) {
+            display: flex;
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &:nth-of-type(3) {
+        display: none;
+
+        background-image: url("../images/bouquet3.jpg");
+    }
+
+    &:nth-of-type(4) {
+        display: none;
+
+        background-image: url("../images/bouquet4.jpg");
     }
 }
-  &__text {
-    margin-bottom: 40px;
 
-    font-size: 14px;
-    line-height: 24px;
+.promo {
+    padding: 0 16px;
 
-    @media (min-width:768px) {
-        width:453px;
-        text-align: center;
-        margin-bottom: 15px;
+    overflow: hidden;
+
+    @media (min-width: 390px) {
+        margin: 0 auto;
+        max-width: 485px;
     }
-  }
-  &__button {
-    margin-bottom: 95px;
-    padding:18px 40px 18.56px 31px;
 
-    font-size: 11px;
-    line-height: 12px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color:$PW;
-
-    background-color: #010001;
-    border: none;
-
-    @media (min-width:768px) {
-        margin-bottom: 90px;
+    @media (min-width: 768px) {
+        padding: 0 0 0 30px;
     }
-  }
+
+    &__picture {
+        font-size: 0px;
+    }
+
+    &__image {
+        width: 288px; // временно, чтобы весь макет ниже картинки не поехал
+        height: 170px;
+
+        @media (min-width: 768px) {
+            width: 100%;
+            height: 323px; //тоже временно, чтобы на планшете было +- ок
+        }
+    }
+
+    &__content {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @media (min-width: 768px) {
+            align-items: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 26px;
+        width: 200px;
+
+        font-size: 20px;
+        line-height: 34px;
+        font-weight: normal;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+
+        @media (min-width: 768px) {
+            margin-bottom: 37px;
+            width: auto;
+
+            font-size: 30px;
+            line-height: 51px;
+        }
+    }
+
+    &__content hr {
+        position: absolute;
+        top: 103px;
+
+        width: 83px;
+
+        font-size: 0px;
+
+        @media (min-width: 768px) {
+            width: 85.5px;
+            top: 86px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 40px;
+
+        font-size: 14px;
+        line-height: 24px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 15px;
+            width: 453px;
+
+            text-align: center;
+        }
+    }
+
+    &__button {
+        margin-bottom: 95px;
+        padding: 18px 40px 18.56px 31px;
+
+        font-size: 11px;
+        line-height: 12px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: $font-color;
+
+        background-color: #010001;
+        border: none;
+
+        @media (min-width: 768px) {
+            margin-bottom: 90px;
+        }
+    }
 }
