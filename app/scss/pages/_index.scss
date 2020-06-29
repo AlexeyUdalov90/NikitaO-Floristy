@@ -39,7 +39,7 @@ body {
 
     background-image: url("../images/flowers_desktop.jpg");
     background-size: cover;
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -51,8 +51,9 @@ body {
       background-image: linear-gradient(0deg, #3B181E 3.33%, rgba(59, 24, 30, 0) 100%);
     }
   }
+
   @media (min-width: 1920px) {
-    margin-bottom: 184px;
+    margin-bottom: 180px;
   }
 
   &__title {
@@ -83,6 +84,7 @@ body {
     @media (min-width: 1920px) {
       width: 820px;
       margin-top: 175px;
+
       font-size: 120px;
       line-height: 132px;
     }
@@ -128,7 +130,7 @@ body {
 
     @media (min-width: 1920px) {
       margin-bottom: 165px;
-      padding: 13px 37px 16px 37px;
+      padding: 14px 37px 17px 37px;
 
       font-size: 12px;
       line-height: 13px;
@@ -151,10 +153,10 @@ body {
 
     @media (min-width: 1366px) {
       position: absolute;
-
-      flex-direction: column;
       left: 50px;
       top: 500px;
+
+      flex-direction: column;
     }
 
     @media (min-width: 1920px) {
@@ -173,6 +175,7 @@ body {
         margin: 0 40px;
       }
     }
+
     .mask-section__social-link a {
       position: relative;
 
@@ -273,6 +276,10 @@ body {
     margin-bottom: 120px;
   }
 
+  @media (min-width: 1920px) {
+    background: url("../images/catalog-background-text.png") no-repeat 51% 13%;
+  }
+
   &__title {
     margin-bottom: 20px;
 
@@ -284,12 +291,17 @@ body {
 
     @media (min-width: 390px) {
       margin: 0 auto 20px auto;
+
       text-align: center;
     }
 
     @media (min-width: 768px) {
       font-size: 30px;
       line-height: 33px;
+    }
+
+    @media (min-width: 1920px) {
+      margin-bottom: 23px;
     }
   }
 
@@ -308,7 +320,7 @@ body {
     }
 
     @media (min-width: 1920px) {
-      margin-bottom: 100px;
+      margin-bottom: 97px;
     }
   }
 
@@ -320,6 +332,10 @@ body {
 
     @media (min-width: 900px) {
       justify-content: center;
+    }
+
+    @media (min-width: 1920px) {
+      margin-bottom: 145px;
     }
   }
 
@@ -390,6 +406,7 @@ body {
 
   @media (min-width: 1920px) {
     margin-right: 50px;
+    padding-top: 37px;
   }
 
   &__title {
@@ -399,6 +416,10 @@ body {
 
     @media (min-width: 768px) {
       flex-direction: row-reverse;
+    }
+
+    @media (min-width: 1920px) {
+      align-items: flex-end;
     }
 
     hr {
@@ -439,8 +460,8 @@ body {
 
     @media (min-width: 768px) {
       display: flex;
-      width: 100%;
       margin-right: 0;
+      width: 100%;
     }
 
     @media (min-width: 1366px) {
@@ -459,8 +480,9 @@ body {
 
     @media (min-width: 1366px) {
       display: flex;
-      width: 100%;
       margin-right: 0;
+      width: 100%;
+
     }
 
     @media (min-width: 1920px) {
@@ -475,13 +497,14 @@ body {
 
     @media (min-width: 1920px) {
       display: flex;
-      width: 100%;
       margin-right: 0;
+      width: 100%;
     }
   }
 }
 
-.promo {
+.promo {                    // Все никак не пойму можно ли попасть в pixel perfect если у тебя флекс или оно того не стоит?
+                            // Пример эта секция и футер (на десктопе) сильно не попадают в макет. Это ок?
   display: flex;
   flex-direction: column;
   padding: 0 16px;
@@ -494,6 +517,11 @@ body {
 
   @media (min-width: 768px) {
     padding: 0 0 0 30px;
+  }
+  @media (min-width: 1920px) {
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 140px;
   }
 
   &__picture {
@@ -532,6 +560,12 @@ body {
       align-items: center;
       max-width: 485px;
     }
+
+    @media (min-width: 1920px) {
+      align-items: flex-start;
+      margin: 42px 175px 0px 20px;
+      width: 352px;
+    }
   }
 
   &__title {
@@ -556,6 +590,11 @@ body {
       font-size: 34px;
       line-height: 56px;
     }
+
+    @media (min-width: 1920px) {
+      font-size: 30px;
+      line-height: 51px;
+    }
   }
 
   &__content hr {
@@ -574,6 +613,10 @@ body {
     @media(min-width: 900px) {
       top: 100px;
     }
+
+    @media (min-width: 1920px) {
+      top: 140px;
+    }
   }
 
   &__text {
@@ -584,7 +627,7 @@ body {
 
     @media (min-width: 768px) {
       margin-bottom: 15px;
-      width: 453px;
+      max-width: 453px;
 
       text-align: center;
     }
@@ -592,6 +635,14 @@ body {
     @media (min-width: 900px) {
       font-size: 16px;
       line-height: 28px;
+    }
+
+    @media (min-width: 1920px) {
+      margin-bottom: 30px;
+
+      font-size: 14px;
+      line-height: 24px;
+      text-align: left;
     }
   }
 

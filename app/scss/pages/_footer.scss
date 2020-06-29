@@ -19,6 +19,10 @@
     @media (min-width: 768px) {
       margin-bottom: 26px;
     }
+
+    @media (min-width: 1920px) {
+      margin-bottom: 5px;
+    }
   }
 
   &__menu {
@@ -32,6 +36,10 @@
       flex-direction: row;
       justify-content: center;
     }
+
+    @media (min-width: 1920px) {
+      margin-bottom: 15px;
+    }
   }
 
   &__menu-item {
@@ -43,16 +51,16 @@
       margin-bottom: 20px;
     }
     @media (min-width: 1366px) {
-      margin-right: 25px;
-      margin-bottom: 10px;
+      margin: 0px 25px 10px 0px;
     }
-
+    @media (min-width: 1920px) {
+      margin-right: 50px;
+    }
     &:last-of-type {
       margin-bottom: 0px;
 
       @media (min-width: 1366px) {
-        margin-bottom: 10px;
-        margin-right: 0;
+        margin: 0px 0px 10px 0px;
       }
     }
 
@@ -71,6 +79,11 @@
       @media (min-width:900px) {
         font-size: 24px;
         line-height: 26px;
+      }
+
+      @media (min-width: 1920px) {
+        font-size: 16px;
+        line-height: 18px;
       }
     }
   }
