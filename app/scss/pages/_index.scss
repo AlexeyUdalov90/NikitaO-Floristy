@@ -51,6 +51,9 @@ body {
       background-image: linear-gradient(0deg, #3B181E 3.33%, rgba(59, 24, 30, 0) 100%);
     }
   }
+  @media (min-width: 1920px) {
+    margin-bottom: 184px;
+  }
 
   &__title {
     margin-bottom: 35px;
@@ -75,6 +78,13 @@ body {
     @media (min-width: 1366px) {
       font-size: 90px;
       line-height: 102px;
+    }
+
+    @media (min-width: 1920px) {
+      width: 820px;
+      margin-top: 175px;
+      font-size: 120px;
+      line-height: 132px;
     }
   }
 
@@ -115,6 +125,18 @@ body {
         background: url("../images/mouse.svg") no-repeat;
       }
     }
+
+    @media (min-width: 1920px) {
+      margin-bottom: 165px;
+      padding: 13px 37px 16px 37px;
+
+      font-size: 12px;
+      line-height: 13px;
+
+      &::before {
+        left: 80px;
+      }
+    }
   }
 
   &__social-list {
@@ -135,6 +157,13 @@ body {
       top: 500px;
     }
 
+    @media (min-width: 1920px) {
+      bottom: 58px;
+      left: 39px;
+
+      justify-content: flex-end;
+    }
+
     .mask-section__social-link {
       margin: 0 20px;
 
@@ -144,7 +173,6 @@ body {
         margin: 0 40px;
       }
     }
-
     .mask-section__social-link a {
       position: relative;
 
@@ -204,6 +232,11 @@ body {
 
       transform: rotate(90deg);
     }
+
+    @media (min-width: 1920px) {
+      top: 785px;
+      right: 25px;
+    }
   }
 
   &__arrow-link svg {
@@ -220,6 +253,10 @@ body {
       width: 13.42px;
 
       transform: rotate(270deg);
+    }
+
+    @media (min-width: 1920px) {
+      left: 195px;
     }
   }
 }
@@ -269,6 +306,10 @@ body {
 
       border: 1px solid $font-color;
     }
+
+    @media (min-width: 1920px) {
+      margin-bottom: 100px;
+    }
   }
 
   &__slider {
@@ -295,6 +336,10 @@ body {
 
       hr:nth-of-type(3),
       hr:nth-of-type(4) {
+        display: none;
+      }
+
+      @media (min-width: 1920px) {
         display: none;
       }
     }
@@ -341,6 +386,10 @@ body {
 
   @media (min-width: 900px) {
     margin: 0 80px 24px 0;
+  }
+
+  @media (min-width: 1920px) {
+    margin-right: 50px;
   }
 
   &__title {
@@ -397,6 +446,10 @@ body {
     @media (min-width: 1366px) {
       margin-right: 80px;
     }
+
+    @media (min-width: 1920px) {
+      margin-right: 50px;
+    }
   }
 
   &:nth-of-type(3) {
@@ -409,12 +462,22 @@ body {
       width: 100%;
       margin-right: 0;
     }
+
+    @media (min-width: 1920px) {
+      margin-right: 50px;
+    }
   }
 
   &:nth-of-type(4) {
     display: none;
 
     background-image: url("../images/bouquet4.jpg");
+
+    @media (min-width: 1920px) {
+      display: flex;
+      width: 100%;
+      margin-right: 0;
+    }
   }
 }
 
