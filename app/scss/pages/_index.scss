@@ -18,7 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 51px;
+  margin-bottom: 55px;
   padding: 83px 50px;
 
   background-image: url("../images/flowers.jpg");
@@ -26,10 +26,30 @@ body {
   background-size: 100%;
 
   @media (min-width: 768px) {
-    margin-bottom: 95px;
+    margin-bottom: 98px;
     padding: 284px 100px 55px 101px;
 
     background-image: url("../images/flowers_ipad.jpg");
+  }
+
+  @media (min-width: 1366px) {
+    position: relative;
+
+    padding: 150px;
+
+    background-image: url("../images/flowers_desktop.jpg");
+    background-size: cover;
+    
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+
+      width: 100%;
+      height: 75px;
+
+      background-image: linear-gradient(0deg, #3B181E 3.33%, rgba(59, 24, 30, 0) 100%);
+    }
   }
 
   &__title {
@@ -50,6 +70,11 @@ body {
       font-family: 'Forum', cursive;
       font-size: 70px;
       line-height: 77px;
+    }
+
+    @media (min-width: 1366px) {
+      font-size: 90px;
+      line-height: 102px;
     }
   }
 
@@ -86,6 +111,14 @@ body {
       margin-bottom: 34px;
     }
 
+    @media (min-width: 1366px) {
+      position: absolute;
+
+      flex-direction: column;
+      left: 50px;
+      top: 500px;
+    }
+
     .mask-section__social-link {
       margin: 0 20px;
 
@@ -109,6 +142,10 @@ body {
       @media (min-width: 768px) {
         width: 55px;
         height: 55px;
+      }
+
+      @media (min-width: 1366px) {
+        background-color: transparent;
       }
 
       & svg {
@@ -135,10 +172,54 @@ body {
     }
   }
 
+  &__arrow-link {
+    font-size: 0px;
+    line-height: 0px;
+
+    @media (min-width: 1366px) {
+      position: absolute;
+      right: 75px;
+      top: 610px;
+
+      font-size: 20px;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      color: $font-color;
+
+      transform: rotate(90deg);
+    }
+
+    @media (min-width: 1366px) {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 500px;
+        left: 230px;
+
+        width: 40px;
+        height: 56px;
+
+        background: url("../images/mouse.svg") no-repeat;
+
+        transform: rotate(270deg);
+      }
+    }
+  }
+
   &__arrow-link svg {
     @media (min-width: 768px) {
       width: 30px;
       height: auto;
+    }
+
+    @media (min-width: 1366px) {
+      position: absolute;
+      bottom: -11px;
+      left: 175px;
+
+      width: 13.42px;
+
+      transform: rotate(270deg);
     }
   }
 }

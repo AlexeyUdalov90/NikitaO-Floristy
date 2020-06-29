@@ -1,4 +1,7 @@
 .header {
+    position: relative;
+    z-index: 5;
+
     display: flex;
     justify-content: space-between;
     padding: 15px 30px 20px 30px;
@@ -54,8 +57,6 @@
         }
 
         &::after {
-            margin-top: 10px;
-
             @media (min-width: 1366px) {
                 margin-top: -5px;
             }
