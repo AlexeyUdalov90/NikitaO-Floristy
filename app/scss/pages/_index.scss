@@ -105,6 +105,10 @@ body {
 
     border: 1px solid $font-color;
     background: rgba(0, 0, 0, 0.4);
+    &:hover {
+      background-color: $font-color;
+      color: #000000;
+    }
 
     @media (min-width: 768px) {
       margin-bottom: 200px;
@@ -199,21 +203,25 @@ body {
         position: absolute;
         top: 25%;
         left: 25%;
+        &:hover {
+          fill: $font-color;
+          path {
+            fill: #000000;
+          }
+          circle {
+            stroke: #000000;
+            fill: #000000;
+          }
+        }
+
+        @media (min-width: 320px) {
+          width: 18px;
+          height: 18px;
+        }
 
         @media (min-width: 768px) {
           width: 29px;
           height: 29px;
-        }
-      }
-
-      & .facebook-f {
-        position: absolute;
-        top: 33%;
-        left: 43%;
-
-        @media (min-width: 768px) {
-          width: 9px;
-          height: 20px;
         }
       }
     }
@@ -222,6 +230,9 @@ body {
   &__arrow-link {
     font-size: 0px;
     line-height: 0px;
+    &:hover svg {
+      transform: translateY(20px);
+    }
 
     @media (min-width: 1366px) {
       position: absolute;
@@ -234,6 +245,10 @@ body {
       color: $font-color;
 
       transform: rotate(90deg);
+
+      &:hover svg {
+        transform: rotate(270deg) translateY(20px);
+      }
     }
 
     @media (min-width: 1920px) {
@@ -320,7 +335,7 @@ body {
     }
 
     @media (min-width: 1920px) {
-      margin-bottom: 97px;
+      margin-bottom: 82px;
     }
   }
 
@@ -390,23 +405,36 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
 
+  &:hover {
+    @media (min-width: 1920px) {
+      outline: 1px solid rgba(255, 255, 255, 0.2);
+      outline-offset: 10px;
+      
+      a {
+        display: inline-block;
+        margin-top: 20px;
+      }
+    }
+  }
+
   @media (min-width: 390px) {
-    margin: 0 auto 15px auto;
+    margin: 0px auto 15px auto;
   }
 
   @media (min-width: 768px) {
-    margin: 0 28px 24px 0;
+    margin: 0px 28px 24px 0;
     padding-top: 42px;
     height: 450px;
   }
 
   @media (min-width: 900px) {
-    margin: 0 80px 24px 0;
+    margin: 0px 80px 24px 0;
   }
 
   @media (min-width: 1920px) {
     margin-right: 50px;
     padding-top: 37px;
+    margin-top: 15px;
   }
 
   &__title {
@@ -447,6 +475,20 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     opacity: 0.9;
+  }
+
+  &__button {
+    display: none;
+    padding: 19px 36px 18px 36px;
+
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #010001;
+
+    background-color: $font-color;
+    text-decoration: none;
   }
 
   &:nth-of-type(1) {
@@ -658,6 +700,11 @@ body {
 
     background-color: #010001;
     border: none;
+
+    &:hover {
+      background-color: $font-color;
+      color: #000000;
+    }
 
     @media (min-width: 768px) {
       margin-bottom: 90px;

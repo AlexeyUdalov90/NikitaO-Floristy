@@ -71,6 +71,10 @@
 
       text-decoration: none;
 
+      &:hover {
+        color: $font-color;
+      }
+
       @media (min-width: 768px) {
         font-size: 20px;
         line-height: 22px;
@@ -101,6 +105,19 @@
     & a {
       width: 25px;
       height: 25px;
+
+      svg {
+        &:hover {
+          fill: $font-color;
+          path {
+            fill: #000000;
+          }
+          circle {
+            stroke: #000000;
+            fill: #000000;
+          }
+        }
+      }
     }
   }
 }
