@@ -1,0 +1,172 @@
+@import "pages/header";
+@import "pages/footer";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  background-color: $font-color;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1920px;
+
+  font-family: 'Forum', cursive;
+  font-size: 10px;
+  line-height: 15px;
+  color: $font-color;
+
+  background-color: $page-color;
+}
+
+.header {
+  padding: 16px 20px 20px 16px;
+
+  @media (min-width: 768px) {
+    position: static;
+
+    padding: 30px 40px 35px 40px;
+
+    &__menu-burger {
+      margin-top: 10px;
+    }
+  }
+}
+
+.content-section {
+  &__main-picture {
+    margin-bottom: 30px;
+
+    line-height: 0px;
+  }
+  
+  @media (min-width: 768px) {
+    &__wrapper {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    padding: 0 20px;
+
+    @media (min-width: 768px) {
+      padding: 0 50px;
+    }
+  }
+
+  &__content-title {
+    width: 250px;
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+
+    @media (min-width: 768px) {
+      font-size: 40px;
+      line-height: 44px;
+      width: auto;
+    }
+  }
+
+  &__content-text {
+    margin-bottom: 38px;
+
+    font-size: 18px;
+    line-height: 22px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 35px;
+
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__content-button {
+    margin-bottom: 40px;
+    padding: 15px 31px 16px 30px;
+
+    font-size: 10px;
+    line-height: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $font-color;
+
+    background-color: transparent;
+    border-color: $font-color;
+
+    @media (min-width: 768px) {
+      margin-bottom: 64px;
+      padding: 20px 42px 19px 42px;
+
+      font-size: 15px;
+      line-height: 17px;
+    }
+  }
+
+  &__slider-section {
+    margin-bottom: 39px;
+  }
+
+  &__slider {
+    display: flex;
+    padding-left: 20px;
+
+    @media (min-width: 330px) {
+      justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+      margin-bottom: 4px;
+      padding: 0 20px;
+    }
+  }
+
+  &__slides {
+    margin-right: 15px;
+    width: 75px;
+    height: 75px;
+
+    overflow: hidden;
+    list-style: none;
+
+    &:last-of-type {
+      margin-right: 0px;
+      width: 30px;
+
+      @media (min-width: 330px) {
+        width: 75px;
+        height: 75px;
+        margin-right: 10px;
+      }
+      @media (min-width: 400px) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 768px) {
+      margin-right: 23px;
+      width: 145px;
+      height: 145px;
+
+      &:last-of-type {
+        width: 145px;
+        height: 145px;
+      }
+    }
+  }
+}
