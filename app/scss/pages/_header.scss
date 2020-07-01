@@ -22,6 +22,8 @@
   }
 
   &__menu-burger {
+    position: relative;
+
     width: 37px;
     padding: 10px 0 0 0;
 
@@ -54,13 +56,9 @@
 
       @media (min-width: 1366px) {
         position: absolute;
-        right: 100px;
+        right: 50px;
 
         width: 23px;
-      }
-
-      @media (min-width: 1920px) {
-        right: 172px;
       }
     }
 
