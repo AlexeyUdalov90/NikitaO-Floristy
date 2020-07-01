@@ -1,35 +1,88 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 15px 30px 20px 30px;
+  position: relative;
+  z-index: 5;
 
-    overflow: hidden;
-    
-    @media (min-width:768px) {
-        padding: 38px 50px 0px 50px;
-    }
-    &__menu-burger {
-        padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px 20px 30px;
+  width: 100%;
 
-        @media (min-width: 768px) {
-            position: absolute;
-            top: 32%; //Как тебе такое решение? (в % указать) Крайне неустойчиво к изменению контента, но зато тянется, мне кажется не лучшее.
-            left: 89%;
-        }
-        &::before , &::after {
-            content: "";
-            display: block;
-            width: 37px;
-            height:1px;
+  overflow: hidden;
 
-            background-color: $PW;
-        }
-        &::after {
-            margin-top: 10px;
-        }
-    }
+  @media (min-width: 768px) {
+    padding: 38px 50px 0px 50px;
+  }
+
+  @media (min-width: 1366px) {
+    align-items: center;
+  }
+
+  @media (min-width: 1920px) {
+    padding: 87px 119px 0px 96px;
+  }
+
+  &__menu-burger {
+    position: relative;
+
+    width: 37px;
+    padding: 10px 0 0 0;
+
+    background-color: transparent;
+    border: none;
     @media (min-width: 768px) {
-        position: absolute;
+      padding: 0;
     }
+
+    @media (min-width: 1366px) {
+      font-size: 20px;
+      line-height: 22px;
+      color: $font-color;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    @media (min-width: 1920px) {
+      margin-top: 12px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 37px;
+      height: 1px;
+
+      background-color: $font-color;
+
+      @media (min-width: 1366px) {
+        position: absolute;
+        right: 50px;
+
+        width: 23px;
+      }
+    }
+
+    &::before {
+      @media (min-width: 1366px) {
+        margin-top: 5px;
+      }
+
+      @media (min-width: 1920px) {
+        margin-top: 8px;
+      }
+    }
+    &::after {
+      @media (min-width: 1366px) {
+        margin-top: -5px;
+      }
+
+      @media (min-width: 1920px) {
+        margin-top: -8px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    position: absolute;
+  }
 }
