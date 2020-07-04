@@ -18,12 +18,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 55px;
-  padding: 83px 50px;
+  margin-bottom: 98px;
+  padding: 83px 50px 40px 50px;
 
   background-image: url("../images/flowers.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: center;
 
   @media (min-width: 768px) {
     margin-bottom: 98px;
@@ -40,10 +41,22 @@ body {
     background-image: url("../images/flowers_desktop.jpg");
     background-size: cover;
 
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100px;
+      left: 49%;
+
+      width: 40px;
+      height: 56px;
+
+      background: url("../images/mouse.svg") no-repeat;
+    }
+    
     &::after {
       content: "";
       position: absolute;
-      bottom: 0px;
+      bottom: -1px;
 
       width: 100%;
       height: 75px;
@@ -108,6 +121,8 @@ body {
     &:hover {
       background-color: $font-color;
       color: #000000;
+
+      transition: 0.4s;
     }
 
     @media (min-width: 768px) {
@@ -116,20 +131,6 @@ body {
 
       font-size: 15px;
       line-height: 17px;
-    }
-
-    @media (min-width: 1366px) {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 200px;
-        left: 110px;
-
-        width: 40px;
-        height: 56px;
-
-        background: url("../images/mouse.svg") no-repeat;
-      }
     }
 
     @media (min-width: 1920px) {
@@ -205,6 +206,7 @@ body {
         left: 25%;
         &:hover {
           fill: $font-color;
+
           path {
             fill: #000000;
           }
@@ -232,6 +234,7 @@ body {
     line-height: 0px;
     &:hover svg {
       transform: translateY(20px);
+      transition: 0.5s;
     }
 
     @media (min-width: 1366px) {
@@ -409,7 +412,6 @@ body {
     @media (min-width: 1920px) {
       outline: 1px solid rgba(255, 255, 255, 0.2);
       outline-offset: 10px;
-      
       a {
         display: inline-block;
         margin-top: 20px;
@@ -545,8 +547,7 @@ body {
   }
 }
 
-.promo {                    // Все никак не пойму можно ли попасть в pixel perfect если у тебя флекс или оно того не стоит?
-                            // Пример эта секция и футер (на десктопе) сильно не попадают в макет. Это ок?
+.promo {
   display: flex;
   flex-direction: column;
   padding: 0 16px;
@@ -560,8 +561,14 @@ body {
   @media (min-width: 768px) {
     padding: 0 0 0 30px;
   }
-  @media (min-width: 1920px) {
+
+  @media (min-width: 1366px){
     flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: 1920px) {
     justify-content: center;
     margin-bottom: 140px;
   }
@@ -602,11 +609,14 @@ body {
       align-items: center;
       max-width: 485px;
     }
+    @media (min-width: 1366px) {
+      align-items: flex-start;
+      width: 352px;
+      margin-right:40px;
+    }
 
     @media (min-width: 1920px) {
-      align-items: flex-start;
       margin: 42px 175px 0px 20px;
-      width: 352px;
     }
   }
 
@@ -655,6 +665,9 @@ body {
     @media(min-width: 900px) {
       top: 100px;
     }
+    @media (min-width: 1366px) {
+      top: 150px;
+    }
 
     @media (min-width: 1920px) {
       top: 140px;
@@ -678,13 +691,15 @@ body {
       font-size: 16px;
       line-height: 28px;
     }
+    @media (min-width: 1366px) {
+      text-align: left;
+    }
 
     @media (min-width: 1920px) {
       margin-bottom: 30px;
 
       font-size: 14px;
       line-height: 24px;
-      text-align: left;
     }
   }
 
@@ -704,6 +719,8 @@ body {
     &:hover {
       background-color: $font-color;
       color: #000000;
+
+      transition: 0.5s;
     }
 
     @media (min-width: 768px) {
