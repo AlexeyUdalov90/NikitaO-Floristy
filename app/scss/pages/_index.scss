@@ -52,7 +52,7 @@ body {
 
       background: url("../images/mouse.svg") no-repeat;
     }
-    
+
     &::after {
       content: "";
       position: absolute;
@@ -95,8 +95,8 @@ body {
     }
 
     @media (min-width: 1920px) {
-      width: 820px;
       margin-top: 175px;
+      width: 820px;
 
       font-size: 120px;
       line-height: 132px;
@@ -118,6 +118,7 @@ body {
 
     border: 1px solid $font-color;
     background: rgba(0, 0, 0, 0.4);
+
     &:hover {
       background-color: $font-color;
       color: #000000;
@@ -204,12 +205,14 @@ body {
         position: absolute;
         top: 25%;
         left: 25%;
+
         &:hover {
           fill: $font-color;
 
           path {
             fill: #000000;
           }
+
           circle {
             stroke: #000000;
             fill: #000000;
@@ -227,11 +230,28 @@ body {
         }
       }
     }
+
+    .mask-section__whatsup-link {
+      &:hover {
+        overflow: visible;
+        background-color: $font-color;
+        border-radius: 50%;
+
+        path {
+          stroke: $font-color;
+        }
+
+        path:nth-of-type(1) {
+          stroke: #000000;
+        }
+      }
+    }
   }
 
   &__arrow-link {
     font-size: 0px;
     line-height: 0px;
+
     &:hover svg {
       transform: translateY(20px);
       transition: 0.5s;
@@ -442,7 +462,8 @@ body {
 
       transition: 0.4s;
 
-      .card__text , a {
+      .card__text,
+      a {
         opacity: 1;
 
         transform: translateY(0px);
@@ -456,6 +477,7 @@ body {
     width: 330px;
     height: 450px;
   }
+
   @media (min-width: 1366px) {
     margin-top: 15px;
   }
@@ -481,7 +503,7 @@ body {
       width: 70px;
       margin-right: 8px;
 
-      border:1px solid $font-color;
+      border: 1px solid $font-color;
 
       @media (min-width: 768px) {
         margin-right: 0;
@@ -504,7 +526,7 @@ body {
     opacity: 0.9;
 
     @media (min-width: 1366px) {
-     transform: translateY(62px);
+      transform: translateY(62px);
     }
   }
 
@@ -593,7 +615,7 @@ body {
     padding: 0 0 0 30px;
   }
 
-  @media (min-width: 1366px){
+  @media (min-width: 1366px) {
     flex-direction: row-reverse;
     justify-content: center;
     margin-bottom: 100px;
@@ -640,10 +662,11 @@ body {
       align-items: center;
       max-width: 485px;
     }
+
     @media (min-width: 1366px) {
       align-items: flex-start;
       width: 352px;
-      margin-right:40px;
+      margin-right: 40px;
     }
 
     @media (min-width: 1920px) {
@@ -696,6 +719,7 @@ body {
     @media(min-width: 900px) {
       top: 100px;
     }
+
     @media (min-width: 1366px) {
       top: 150px;
     }
@@ -722,6 +746,7 @@ body {
       font-size: 16px;
       line-height: 28px;
     }
+
     @media (min-width: 1366px) {
       text-align: left;
     }
