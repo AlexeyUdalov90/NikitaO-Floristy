@@ -357,6 +357,26 @@ body {
     }
   }
 
+  &__card {
+    margin-bottom: 15px;
+
+    @media (min-width: 390px) {
+      margin: 0px auto 15px auto;
+    }
+
+    @media (min-width: 768px) {
+      margin: 0px 28px 24px 0;
+    }
+
+    @media (min-width: 900px) {
+      margin: 0px 80px 24px 0;
+    }
+
+    @media (min-width: 1920px) {
+      margin-right: 50px;
+    }
+  }
+
   &__controls {
     display: flex;
     max-width: 330px;
@@ -399,44 +419,49 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 15px;
   padding: 23px 0 0 20px;
-  min-width: 288px;
-  min-height: 392px;
-  max-width: 330px;
+  width: 288px;
+  height: 392px;
 
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 
   &:hover {
-    @media (min-width: 1920px) {
+    @media (min-width: 320px) {
+      a {
+        opacity: 1;
+        transition: 0.4s;
+      }
+    }
+
+    @media (min-width: 1366px) {
       outline: 1px solid rgba(255, 255, 255, 0.2);
       outline-offset: 10px;
-      a {
-        display: inline-block;
-        margin-top: 20px;
+
+      transition: 0.4s;
+
+      .card__text , a {
+        opacity: 1;
+
+        transform: translateY(0px);
+        transition: 0.4s;
       }
     }
   }
 
-  @media (min-width: 390px) {
-    margin: 0px auto 15px auto;
-  }
-
   @media (min-width: 768px) {
-    margin: 0px 28px 24px 0;
     padding-top: 42px;
+    width: 330px;
     height: 450px;
   }
-
-  @media (min-width: 900px) {
-    margin: 0px 80px 24px 0;
+  @media (min-width: 1366px) {
+    margin-top: 15px;
   }
 
   @media (min-width: 1920px) {
-    margin-right: 50px;
     padding-top: 37px;
-    margin-top: 15px;
   }
 
   &__title {
@@ -456,12 +481,12 @@ body {
       width: 70px;
       margin-right: 8px;
 
+      border:1px solid $font-color;
+
       @media (min-width: 768px) {
         margin-right: 0;
         margin-left: 8px;
       }
-
-      border:1px solid $font-color;
     }
 
     span {
@@ -477,10 +502,15 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     opacity: 0.9;
+
+    @media (min-width: 1366px) {
+     transform: translateY(62px);
+    }
   }
 
   &__button {
-    display: none;
+    display: inline-block;
+    margin-top: 10px;
     padding: 19px 36px 18px 36px;
 
     font-size: 12px;
@@ -488,16 +518,21 @@ body {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #010001;
+    opacity: 0.4;
 
     background-color: $font-color;
     text-decoration: none;
+
+    @media (min-width: 1366px) {
+      transform: translateY(10px);
+    }
   }
 
-  &:nth-of-type(1) {
+  &--wedding-bouquet {
     background-image: url("../images/bouquet1.jpg");
   }
 
-  &:nth-of-type(2) {
+  &--bouquet {
     display: none;
 
     background-image: url("../images/bouquet2.jpg");
@@ -505,7 +540,6 @@ body {
     @media (min-width: 768px) {
       display: flex;
       margin-right: 0;
-      width: 100%;
     }
 
     @media (min-width: 1366px) {
@@ -517,7 +551,7 @@ body {
     }
   }
 
-  &:nth-of-type(3) {
+  &--compositions {
     display: none;
 
     background-image: url("../images/bouquet3.jpg");
@@ -525,8 +559,6 @@ body {
     @media (min-width: 1366px) {
       display: flex;
       margin-right: 0;
-      width: 100%;
-
     }
 
     @media (min-width: 1920px) {
@@ -534,7 +566,7 @@ body {
     }
   }
 
-  &:nth-of-type(4) {
+  &--activity {
     display: none;
 
     background-image: url("../images/bouquet4.jpg");
@@ -542,7 +574,6 @@ body {
     @media (min-width: 1920px) {
       display: flex;
       margin-right: 0;
-      width: 100%;
     }
   }
 }

@@ -1,17 +1,3 @@
-@import "pages/header";
-@import "pages/footer";
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 html {
   background-color: $font-color;
 }
@@ -84,7 +70,7 @@ body {
       margin-bottom: 0;
     }
   }
-  
+
   @media (min-width: 768px) {
     &__wrapper {
       display: flex;
@@ -241,6 +227,7 @@ body {
         height: 75px;
         margin-right: 10px;
       }
+
       @media (min-width: 400px) {
         margin-right: 0;
       }
@@ -260,7 +247,7 @@ body {
     @media (min-width: 950px) {
       width: 175px;
       height: 175px;
-      
+
       img {
         width: 100%;
       }
