@@ -32,6 +32,8 @@
     padding: 10px 0 0 0;
     width: 37px;
 
+    font-size: 0px;
+
     background-color: transparent;
     border: none;
 
@@ -74,6 +76,7 @@
     }
 
     &::after {
+      margin-top: 10px;
       @media (min-width: 1366px) {
         bottom: 7px;
       }
