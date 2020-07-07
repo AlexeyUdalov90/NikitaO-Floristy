@@ -18,12 +18,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 55px;
-  padding: 83px 50px;
+  margin-bottom: 98px;
+  padding: 83px 50px 40px 50px;
 
   background-image: url("../images/flowers.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: center;
 
   @media (min-width: 768px) {
     margin-bottom: 98px;
@@ -40,10 +41,22 @@ body {
     background-image: url("../images/flowers_desktop.jpg");
     background-size: cover;
 
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100px;
+      left: 49%;
+
+      width: 40px;
+      height: 56px;
+
+      background: url("../images/mouse.svg") no-repeat;
+    }
+
     &::after {
       content: "";
       position: absolute;
-      bottom: 0px;
+      bottom: -1px;
 
       width: 100%;
       height: 75px;
@@ -82,8 +95,8 @@ body {
     }
 
     @media (min-width: 1920px) {
-      width: 820px;
       margin-top: 175px;
+      width: 820px;
 
       font-size: 120px;
       line-height: 132px;
@@ -105,9 +118,12 @@ body {
 
     border: 1px solid $font-color;
     background: rgba(0, 0, 0, 0.4);
+
     &:hover {
       background-color: $font-color;
       color: #000000;
+
+      transition: 0.4s;
     }
 
     @media (min-width: 768px) {
@@ -116,20 +132,6 @@ body {
 
       font-size: 15px;
       line-height: 17px;
-    }
-
-    @media (min-width: 1366px) {
-      &::before {
-        content: "";
-        position: absolute;
-        top: 200px;
-        left: 110px;
-
-        width: 40px;
-        height: 56px;
-
-        background: url("../images/mouse.svg") no-repeat;
-      }
     }
 
     @media (min-width: 1920px) {
@@ -203,11 +205,14 @@ body {
         position: absolute;
         top: 25%;
         left: 25%;
+
         &:hover {
           fill: $font-color;
+
           path {
             fill: #000000;
           }
+
           circle {
             stroke: #000000;
             fill: #000000;
@@ -225,13 +230,31 @@ body {
         }
       }
     }
+
+    .mask-section__whatsup-link {
+      &:hover {
+        overflow: visible;
+        background-color: $font-color;
+        border-radius: 50%;
+
+        path {
+          stroke: $font-color;
+        }
+
+        path:nth-of-type(1) {
+          stroke: #000000;
+        }
+      }
+    }
   }
 
   &__arrow-link {
     font-size: 0px;
     line-height: 0px;
+
     &:hover svg {
       transform: translateY(20px);
+      transition: 0.5s;
     }
 
     @media (min-width: 1366px) {
@@ -354,6 +377,26 @@ body {
     }
   }
 
+  &__card {
+    margin-bottom: 15px;
+
+    @media (min-width: 390px) {
+      margin: 0px auto 15px auto;
+    }
+
+    @media (min-width: 768px) {
+      margin: 0px 28px 24px 0;
+    }
+
+    @media (min-width: 900px) {
+      margin: 0px 80px 24px 0;
+    }
+
+    @media (min-width: 1920px) {
+      margin-right: 50px;
+    }
+  }
+
   &__controls {
     display: flex;
     max-width: 330px;
@@ -396,45 +439,51 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 15px;
   padding: 23px 0 0 20px;
-  min-width: 288px;
-  min-height: 392px;
-  max-width: 330px;
+  width: 288px;
+  height: 392px;
 
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
 
   &:hover {
-    @media (min-width: 1920px) {
+    @media (min-width: 320px) {
+      a {
+        opacity: 1;
+        transition: 0.4s;
+      }
+    }
+
+    @media (min-width: 1366px) {
       outline: 1px solid rgba(255, 255, 255, 0.2);
       outline-offset: 10px;
-      
+
+      transition: 0.4s;
+
+      .card__text,
       a {
-        display: inline-block;
-        margin-top: 20px;
+        opacity: 1;
+
+        transform: translateY(0px);
+        transition: 0.4s;
       }
     }
   }
 
-  @media (min-width: 390px) {
-    margin: 0px auto 15px auto;
-  }
-
   @media (min-width: 768px) {
-    margin: 0px 28px 24px 0;
     padding-top: 42px;
+    width: 330px;
     height: 450px;
   }
 
-  @media (min-width: 900px) {
-    margin: 0px 80px 24px 0;
+  @media (min-width: 1366px) {
+    margin-top: 15px;
   }
 
   @media (min-width: 1920px) {
-    margin-right: 50px;
     padding-top: 37px;
-    margin-top: 15px;
   }
 
   &__title {
@@ -454,12 +503,12 @@ body {
       width: 70px;
       margin-right: 8px;
 
+      border: 1px solid $font-color;
+
       @media (min-width: 768px) {
         margin-right: 0;
         margin-left: 8px;
       }
-
-      border:1px solid $font-color;
     }
 
     span {
@@ -475,10 +524,15 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.1em;
     opacity: 0.9;
+
+    @media (min-width: 1366px) {
+      transform: translateY(62px);
+    }
   }
 
   &__button {
-    display: none;
+    display: inline-block;
+    margin-top: 10px;
     padding: 19px 36px 18px 36px;
 
     font-size: 12px;
@@ -486,16 +540,21 @@ body {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: #010001;
+    opacity: 0.4;
 
     background-color: $font-color;
     text-decoration: none;
+
+    @media (min-width: 1366px) {
+      transform: translateY(10px);
+    }
   }
 
-  &:nth-of-type(1) {
+  &--wedding-bouquet {
     background-image: url("../images/bouquet1.jpg");
   }
 
-  &:nth-of-type(2) {
+  &--bouquet {
     display: none;
 
     background-image: url("../images/bouquet2.jpg");
@@ -503,7 +562,6 @@ body {
     @media (min-width: 768px) {
       display: flex;
       margin-right: 0;
-      width: 100%;
     }
 
     @media (min-width: 1366px) {
@@ -515,7 +573,7 @@ body {
     }
   }
 
-  &:nth-of-type(3) {
+  &--compositions {
     display: none;
 
     background-image: url("../images/bouquet3.jpg");
@@ -523,8 +581,6 @@ body {
     @media (min-width: 1366px) {
       display: flex;
       margin-right: 0;
-      width: 100%;
-
     }
 
     @media (min-width: 1920px) {
@@ -532,7 +588,7 @@ body {
     }
   }
 
-  &:nth-of-type(4) {
+  &--activity {
     display: none;
 
     background-image: url("../images/bouquet4.jpg");
@@ -540,13 +596,11 @@ body {
     @media (min-width: 1920px) {
       display: flex;
       margin-right: 0;
-      width: 100%;
     }
   }
 }
 
-.promo {                    // Все никак не пойму можно ли попасть в pixel perfect если у тебя флекс или оно того не стоит?
-                            // Пример эта секция и футер (на десктопе) сильно не попадают в макет. Это ок?
+.promo {
   display: flex;
   flex-direction: column;
   padding: 0 16px;
@@ -560,8 +614,14 @@ body {
   @media (min-width: 768px) {
     padding: 0 0 0 30px;
   }
-  @media (min-width: 1920px) {
+
+  @media (min-width: 1366px) {
     flex-direction: row-reverse;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  @media (min-width: 1920px) {
     justify-content: center;
     margin-bottom: 140px;
   }
@@ -603,10 +663,14 @@ body {
       max-width: 485px;
     }
 
-    @media (min-width: 1920px) {
+    @media (min-width: 1366px) {
       align-items: flex-start;
-      margin: 42px 175px 0px 20px;
       width: 352px;
+      margin-right: 40px;
+    }
+
+    @media (min-width: 1920px) {
+      margin: 42px 175px 0px 20px;
     }
   }
 
@@ -656,6 +720,10 @@ body {
       top: 100px;
     }
 
+    @media (min-width: 1366px) {
+      top: 150px;
+    }
+
     @media (min-width: 1920px) {
       top: 140px;
     }
@@ -679,12 +747,15 @@ body {
       line-height: 28px;
     }
 
+    @media (min-width: 1366px) {
+      text-align: left;
+    }
+
     @media (min-width: 1920px) {
       margin-bottom: 30px;
 
       font-size: 14px;
       line-height: 24px;
-      text-align: left;
     }
   }
 
@@ -704,6 +775,8 @@ body {
     &:hover {
       background-color: $font-color;
       color: #000000;
+
+      transition: 0.5s;
     }
 
     @media (min-width: 768px) {

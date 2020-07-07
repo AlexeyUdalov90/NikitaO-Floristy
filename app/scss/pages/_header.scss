@@ -6,43 +6,50 @@
   justify-content: space-between;
   padding: 15px 30px 20px 30px;
   width: 100%;
+  max-width: 1920px;
 
   overflow: hidden;
 
   @media (min-width: 768px) {
-    padding: 38px 50px 0px 50px;
+    position: absolute;
+
+    padding: 38px 50px 0 50px;
   }
 
   @media (min-width: 1366px) {
+    padding: 38px 30px 0 50px;
+
     align-items: center;
   }
 
   @media (min-width: 1920px) {
-    padding: 87px 119px 0px 96px;
+    padding: 87px 99px 0 96px;
   }
 
   &__menu-burger {
     position: relative;
 
-    width: 37px;
     padding: 10px 0 0 0;
+    width: 37px;
+
+    font-size: 0px;
 
     background-color: transparent;
     border: none;
+
     @media (min-width: 768px) {
       padding: 0;
     }
 
     @media (min-width: 1366px) {
+      padding-left: 30px;
+      width: auto;
+
       font-size: 20px;
       line-height: 22px;
       color: $font-color;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-    }
-
-    @media (min-width: 1920px) {
-      margin-top: 12px;
     }
 
     &::before,
@@ -56,7 +63,7 @@
 
       @media (min-width: 1366px) {
         position: absolute;
-        right: 50px;
+        left: 0;
 
         width: 23px;
       }
@@ -64,25 +71,15 @@
 
     &::before {
       @media (min-width: 1366px) {
-        margin-top: 5px;
-      }
-
-      @media (min-width: 1920px) {
-        margin-top: 8px;
+        top: 5px;
       }
     }
+
     &::after {
+      margin-top: 10px;
       @media (min-width: 1366px) {
-        margin-top: -5px;
-      }
-
-      @media (min-width: 1920px) {
-        margin-top: -8px;
+        bottom: 7px;
       }
     }
-  }
-
-  @media (min-width: 768px) {
-    position: absolute;
   }
 }

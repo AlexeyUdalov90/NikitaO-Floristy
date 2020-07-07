@@ -50,12 +50,15 @@
     @media (min-width: 768px) {
       margin-bottom: 20px;
     }
+
     @media (min-width: 1366px) {
       margin: 0px 25px 10px 0px;
     }
+
     @media (min-width: 1920px) {
       margin-right: 50px;
     }
+
     &:last-of-type {
       margin-bottom: 0px;
 
@@ -99,8 +102,9 @@
   }
 
   &__social-link {
-    list-style: none;
     margin-right: 50px;
+
+    list-style: none;
 
     & a {
       width: 25px;
@@ -109,14 +113,32 @@
       svg {
         &:hover {
           fill: $font-color;
+
           path {
             fill: #000000;
           }
+
           circle {
             stroke: #000000;
             fill: #000000;
           }
         }
+      }
+    }
+  }
+
+  .mask-section__whatsup-link {
+    &:hover {
+      overflow: visible;
+      background-color: $font-color;
+      border-radius: 50%;
+
+      path {
+        stroke: $font-color;
+      }
+
+      path:nth-of-type(1) {
+        stroke: #000000;
       }
     }
   }
