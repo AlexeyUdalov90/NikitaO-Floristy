@@ -1,10 +1,11 @@
 html {
-  background-color: $font-color;
+  background-color: $page-color;
 }
 
 body {
   margin: 0 auto;
   max-width: 1920px;
+  min-height: 100vh;
 
   font-family: 'Forum', cursive;
   font-size: 10px;
@@ -200,10 +201,6 @@ body {
     }
   }
 
-  &__slider-section {
-    margin-bottom: 39px;
-  }
-
   &__slider {
     position: relative;
 
@@ -216,7 +213,7 @@ body {
 
     @media (min-width: 768px) {
       margin-top: 0;
-      margin-bottom: 4px;
+      margin-bottom: 45px;
       padding: 0 20px;
     }
 
