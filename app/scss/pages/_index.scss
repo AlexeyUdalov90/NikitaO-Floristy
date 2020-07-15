@@ -119,11 +119,11 @@ body {
     border: 1px solid $font-color;
     background: rgba(0, 0, 0, 0.4);
 
+    transition: 0.3s ease;
+
     &:hover {
       background-color: $font-color;
       color: #000000;
-
-      transition: 0.4s;
     }
 
     @media (min-width: 768px) {
@@ -201,23 +201,23 @@ body {
         background-color: transparent;
       }
 
+      &:hover svg {
+        fill: $font-color;
+
+        path {
+          fill: #000000;
+        }
+
+        circle {
+          stroke: #000000;
+          fill: #000000;
+        }
+      }
+
       & svg {
         position: absolute;
         top: 25%;
         left: 25%;
-
-        &:hover {
-          fill: $font-color;
-
-          path {
-            fill: #000000;
-          }
-
-          circle {
-            stroke: #000000;
-            fill: #000000;
-          }
-        }
 
         @media (min-width: 320px) {
           width: 18px;
@@ -232,7 +232,7 @@ body {
     }
 
     .mask-section__whatsup-link {
-      &:hover {
+      &:hover svg {
         overflow: visible;
         background-color: $font-color;
         border-radius: 50%;
@@ -252,9 +252,12 @@ body {
     font-size: 0px;
     line-height: 0px;
 
+    & svg {
+      transition: 0.3s ease;
+    }
+
     &:hover svg {
       transform: translateY(20px);
-      transition: 0.5s;
     }
 
     @media (min-width: 1366px) {
@@ -448,11 +451,18 @@ body {
   background-position: center;
   overflow: hidden;
 
+  transition: 0.5s ease;
+
+  & a,
+  .card__text,
+  .card__text a {
+    transition: 0.5s ease;
+  }
+
   &:hover {
     @media (min-width: 320px) {
       a {
         opacity: 1;
-        transition: 0.4s;
       }
     }
 
@@ -460,14 +470,11 @@ body {
       outline: 1px solid rgba(255, 255, 255, 0.2);
       outline-offset: 10px;
 
-      transition: 0.4s;
-
       .card__text,
       a {
         opacity: 1;
 
         transform: translateY(0px);
-        transition: 0.4s;
       }
     }
   }
@@ -772,11 +779,11 @@ body {
     background-color: #010001;
     border: none;
 
+    transition: 0.3s ease;
+
     &:hover {
       background-color: $font-color;
       color: #000000;
-
-      transition: 0.5s;
     }
 
     @media (min-width: 768px) {

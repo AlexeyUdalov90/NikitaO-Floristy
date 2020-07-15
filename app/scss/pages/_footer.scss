@@ -74,6 +74,8 @@
 
       text-decoration: none;
 
+      transition: 0.3s ease;
+
       &:hover {
         color: $font-color;
       }
@@ -110,25 +112,23 @@
       width: 25px;
       height: 25px;
 
-      svg {
-        &:hover {
-          fill: $font-color;
+      &:hover svg {
+        fill: $font-color;
 
-          path {
-            fill: #000000;
-          }
+        path {
+          fill: #000000;
+        }
 
-          circle {
-            stroke: #000000;
-            fill: #000000;
-          }
+        circle {
+          stroke: #000000;
+          fill: #000000;
         }
       }
     }
   }
 
   .mask-section__whatsup-link {
-    &:hover {
+    &:hover svg {
       overflow: visible;
       background-color: $font-color;
       border-radius: 50%;
@@ -141,5 +141,11 @@
         stroke: #000000;
       }
     }
+  }
+}
+
+.footer--hide {
+  @media (min-width: 1366px) {
+    display: none;
   }
 }
