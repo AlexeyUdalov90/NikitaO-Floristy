@@ -148,103 +148,26 @@ body {
   }
 
   &__social-list {
-    display: flex;
-    justify-content: space-around;
     margin-bottom: 30px;
     padding: 0;
 
     @media (min-width: 768px) {
       margin-bottom: 34px;
     }
-
+  
     @media (min-width: 1366px) {
       position: absolute;
       left: 50px;
       top: 500px;
-
+  
       flex-direction: column;
     }
-
+  
     @media (min-width: 1920px) {
       bottom: 58px;
       left: 39px;
-
+  
       justify-content: flex-end;
-    }
-
-    .mask-section__social-link {
-      margin: 0 20px;
-
-      list-style: none;
-
-      @media (min-width: 768px) {
-        margin: 0 40px;
-      }
-    }
-
-    .mask-section__social-link a {
-      position: relative;
-
-      display: block;
-      width: 35px;
-      height: 35px;
-
-      background-color: $page-color;
-      border-radius: 50%;
-
-      @media (min-width: 768px) {
-        width: 55px;
-        height: 55px;
-      }
-
-      @media (min-width: 1366px) {
-        background-color: transparent;
-      }
-
-      &:hover svg {
-        fill: $font-color;
-
-        path {
-          fill: #000000;
-        }
-
-        circle {
-          stroke: #000000;
-          fill: #000000;
-        }
-      }
-
-      & svg {
-        position: absolute;
-        top: 25%;
-        left: 25%;
-
-        @media (min-width: 320px) {
-          width: 18px;
-          height: 18px;
-        }
-
-        @media (min-width: 768px) {
-          width: 29px;
-          height: 29px;
-        }
-      }
-    }
-
-    .mask-section__whatsup-link {
-      &:hover svg {
-        overflow: visible;
-        background-color: $font-color;
-        border-radius: 50%;
-
-        path {
-          stroke: $font-color;
-        }
-
-        path:nth-of-type(1) {
-          stroke: #000000;
-        }
-      }
     }
   }
 

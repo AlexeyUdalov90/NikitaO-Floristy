@@ -96,54 +96,7 @@
       }
     }
   }
-
-  &__social-list {
-    display: flex;
-    justify-content: center;
-    margin-left: 12px;
-  }
-
-  &__social-link {
-    margin-right: 50px;
-
-    list-style: none;
-
-    & a {
-      width: 25px;
-      height: 25px;
-
-      &:hover svg {
-        fill: $font-color;
-
-        path {
-          fill: #000000;
-        }
-
-        circle {
-          stroke: #000000;
-          fill: #000000;
-        }
-      }
-    }
-  }
-
-  .mask-section__whatsup-link {
-    &:hover svg {
-      overflow: visible;
-      background-color: $font-color;
-      border-radius: 50%;
-
-      path {
-        stroke: $font-color;
-      }
-
-      path:nth-of-type(1) {
-        stroke: #000000;
-      }
-    }
-  }
 }
-
 .footer--hide {
   @media (min-width: 1366px) {
     display: none;
