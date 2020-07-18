@@ -63,28 +63,34 @@
   }
 
   &__icon {
-      position: absolute;
-      top: 25%;
-      left: 25%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
 
-      @media (min-width: 320px) {
-        width: 18px;
-        height: 18px;
-      }
-
-      @media (min-width: 768px) {
-        width: 29px;
-        height: 29px;
-      }
+    @media (min-width: 320px) {
+      width: 18px;
+      height: 18px;
     }
+
+    @media (min-width: 768px) {
+      width: 29px;
+      height: 29px;
+    }
+  }
 
 }
 
 .social--footer {
   justify-content: center;
 
-  .social__link {
+  .social__item {
+    margin: 0 20px;
+  }
 
+  .social__link {
+    @media (min-width: 768px) {
+      width: 35px;
+      height: 35px;
+    }
   }
 }
-

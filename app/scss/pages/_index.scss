@@ -154,19 +154,19 @@ body {
     @media (min-width: 768px) {
       margin-bottom: 34px;
     }
-  
+
     @media (min-width: 1366px) {
       position: absolute;
       left: 50px;
       top: 500px;
-  
+
       flex-direction: column;
     }
-  
+
     @media (min-width: 1920px) {
       bottom: 58px;
       left: 39px;
-  
+
       justify-content: flex-end;
     }
   }
