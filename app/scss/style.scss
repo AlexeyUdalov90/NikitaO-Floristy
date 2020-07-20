@@ -13,10 +13,8 @@ img {
 @import "core/fonts";
 
 @import "pages/header";
-@import "pages/index";
+@import "pages/social";
 @import "pages/footer";
+@import "pages/index";
 
-@import "pages/bouquet-internal-page";
-@import "pages/wedding-internal-page";
-@import "pages/compositions-internal-page";
-@import "pages/activity-internal-page";
+@import "pages/internal-pages";
