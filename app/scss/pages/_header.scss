@@ -28,7 +28,7 @@
   &__menu-burger {
     position: relative;
 
-    padding: 10px 0 0 0;
+    padding: 0;
     width: 37px;
 
     font-size: 0px;
@@ -112,6 +112,55 @@
 
     @media (min-width: 1920px) {
       padding: 87px 118px 35px 94px;
+    }
+  }
+
+  &--active {
+    position: relative;
+  }
+
+  &--active &__logo {
+    margin: 0 auto;
+  }
+
+  &--active &__menu-burger {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    height: 25px;
+
+    font-size: 0;
+
+    @media (min-width: 768px) {
+      top: 50px;
+      right: 50px;
+    }
+
+    @media (min-width: 1366px) {
+      right: 80px;
+    }
+
+    @media (min-width: 1920px) {
+      top: 100px;
+      right: 150px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      width: 23px;
+    }
+
+    &::before {
+      top: 10px;
+
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 0;
+
+      transform: rotate(-45deg);
     }
   }
 }
