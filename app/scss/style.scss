@@ -1,20 +1,13 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 @import "core/vars";
 @import "core/fonts";
 
 @import "pages/header";
+@import "pages/main-menu";
 @import "pages/social";
+@import "pages/callback-popup";
 @import "pages/footer";
 @import "pages/index";
 
 @import "pages/internal-pages";
+
+@import "core/default";

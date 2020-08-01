@@ -1,0 +1,153 @@
+.callback-popup {
+  position: absolute;
+  top: 70px;
+  z-index: 100;
+
+  display: flex; // пришлось default в style.scss перенести вниз, чтобы перезаписать это свойство, это ок?
+  margin: 0 auto;
+
+  @media (min-width: 1366px) {
+    top: 0;
+
+    width: 716px;
+  }
+
+  &__image {
+    display: none;
+
+    @media (min-width: 1366px) {
+      display: block;
+    }
+  }
+}
+
+.callback {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 60px 20px 50px 20px;
+  width: 288px;
+
+  background-color: $page-color;
+
+  @media (min-width: 768px) {
+    padding: 100px 45px 130px 45px;
+    width: 464px;
+  }
+
+  @media (min-width: 1366px) {
+    padding: 66px;
+    width: 381px;
+  }
+
+  &__close-button {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+
+    background: none;
+    border: none;
+  }
+
+  &__title {
+    margin: 0 auto 45px auto;
+    width: 200px;
+
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-weight: normal;
+
+    @media (min-width: 768px) {
+      margin: 0 auto 50px auto;
+      width: 300px;
+
+      font-size: 30px;
+      line-height: 33px;
+    }
+
+    @media (min-width: 1366px) {
+      margin: 0 auto 28px auto;
+      width: 200px;
+
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  &__name-input,
+  &__phone-input {
+    padding: 13px 0px 13px 22px;
+
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: -0.01em;
+    color:$font-color;
+
+    background-color: transparent;
+    border: 1px solid rgba(246, 246, 249, 0.2);
+
+    @media (min-width: 768px) {
+      padding: 20px 0px 20px 33px;
+
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    @media (min-width: 1366px) {
+      padding: 12px 0px 12px 22px;
+
+      font-size: 14px;
+      line-height: 15px;
+    }
+  }
+
+  &__name-input {
+    margin-bottom: 16px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: 1366px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__phone-input {
+    margin-bottom: 27px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: 1366px) {
+      margin-bottom: 27px;
+    }
+  }
+
+  &__submit-button {
+    padding: 15px 60px;
+
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      padding: 23px 92px;
+      font-size: 15px;
+      line-height: 17px;
+    }
+
+    @media (min-width: 1366px) {
+      padding: 15px 60px;
+      font-size: 11px;
+      line-height: 12px;
+    }
+  }
+}

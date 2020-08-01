@@ -1,20 +1,6 @@
-html {
-  background-color: $font-color;
-}
-
-body {
-  margin: 0 auto;
-  max-width: 1920px;
-
-  font-family: 'Forum', cursive;
-  font-size: 10px;
-  line-height: 15px;
-  color: $font-color;
-
-  background-color: $page-color;
-}
-
 .mask-section {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +20,6 @@ body {
   }
 
   @media (min-width: 1366px) {
-    position: relative;
 
     padding: 150px;
 
@@ -531,6 +516,8 @@ body {
 }
 
 .promo {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   padding: 0 16px;

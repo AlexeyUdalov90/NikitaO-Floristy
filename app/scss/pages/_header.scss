@@ -1,9 +1,10 @@
 .header {
   position: relative;
-  z-index: 5;
+  z-index: 50;
 
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 30px 20px 30px;
   width: 100%;
   max-width: 1920px;
@@ -18,8 +19,6 @@
 
   @media (min-width: 1366px) {
     padding: 38px 30px 0 50px;
-
-    align-items: center;
   }
 
   @media (min-width: 1920px) {
@@ -29,7 +28,7 @@
   &__menu-burger {
     position: relative;
 
-    padding: 10px 0 0 0;
+    padding: 0;
     width: 37px;
 
     font-size: 0px;
@@ -77,41 +76,91 @@
 
     &::after {
       margin-top: 10px;
+
       @media (min-width: 1366px) {
         bottom: 7px;
       }
     }
   }
-}
 
-.header--internal {
-  padding: 16px 20px 20px 16px;
+  &--internal {
+    padding: 16px 20px 20px 16px;
 
-  @media (min-width: 768px) {
-    position: static;
+    @media (min-width: 768px) {
+      position: static;
 
-    padding: 30px 40px 35px 40px;
+      padding: 30px 40px 35px 40px;
 
-    &__menu-burger {
-      margin-top: 10px;
+      &__menu-burger {
+        margin-top: 10px;
+      }
+    }
+
+    @media (min-width: 1366px) {
+      position: absolute;
+
+      padding: 30px 40px 35px 40px;
+
+      img {
+        width: 158px;
+      }
+    }
+
+    @media (min-width: 1500px) {
+      padding: 50px;
+    }
+
+    @media (min-width: 1920px) {
+      padding: 87px 118px 35px 94px;
     }
   }
 
-  @media (min-width: 1366px) {
+  &--active {
+    position: relative;
+  }
+
+  &--active &__logo {
+    margin: 0 auto;
+  }
+
+  &--active &__menu-burger {
     position: absolute;
+    top: 25px;
+    right: 30px;
 
-    padding: 30px 40px 35px 40px;
+    height: 25px;
 
-    img {
-      width: 158px;
+    font-size: 0;
+
+    @media (min-width: 768px) {
+      top: 50px;
+      right: 50px;
     }
-  }
 
-  @media (min-width: 1500px) {
-    padding: 50px;
-  }
+    @media (min-width: 1366px) {
+      right: 80px;
+    }
 
-  @media (min-width: 1920px) {
-    padding: 87px 118px 35px 94px;
+    @media (min-width: 1920px) {
+      top: 100px;
+      right: 150px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      width: 23px;
+    }
+
+    &::before {
+      top: 10px;
+
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: 0;
+
+      transform: rotate(-45deg);
+    }
   }
 }

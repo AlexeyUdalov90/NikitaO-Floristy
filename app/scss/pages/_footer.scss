@@ -96,10 +96,10 @@
       }
     }
   }
-}
 
-.footer--hide {
-  @media (min-width: 1366px) {
-    display: none;
+  &--hide {
+    @media (min-width: 1366px) {
+      display: none;
+    }
   }
 }
