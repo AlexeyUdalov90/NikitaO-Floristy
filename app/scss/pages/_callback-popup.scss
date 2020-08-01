@@ -1,7 +1,10 @@
 .callback-popup {
   position: absolute;
   top: 70px;
+  z-index: 100;
+
   display: flex; // пришлось default в style.scss перенести вниз, чтобы перезаписать это свойство, это ок?
+  margin: 0 auto;
 
   @media (min-width: 1366px) {
     top: 0;
