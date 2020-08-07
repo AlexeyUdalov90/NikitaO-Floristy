@@ -20,6 +20,21 @@
     <button class="header__menu-burger">меню</button>
   </header>
   <main>
+    <div class="callback-popup hidden">
+      <img class="callback-popup__image" src="../images/popup-image.jpg" alt="Картинка с цветами">
+      <form class="callback-popup__form callback" action="#" method="POST">
+        <button class="callback__close-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23 23L1 1M1 23L23 1L1 23Z" stroke="white" stroke-opacity="0.3" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <h2 class="callback__title">Оставьте свой номер и мы вам перезвоним!</h2>
+        <input class="callback__name-input" type="text" name="name-input" placeholder="Имя">
+        <input class="callback__phone-input" type="phone" name="name-input" placeholder="Телефон">
+        <input class="callback__submit-button" type="submit" value="Позвоните мне">
+      </form>
+    </div>
     <section class="content-section">
       <nav class="main-menu hidden">
         <ul class="main-menu__list">
@@ -47,7 +62,7 @@
             мероприятие могут превратиться в настоящую сказку, всего лишь благодаря оформлению. Полную коллекцию
             оформлений в разнообразных стилях вы можете посмотреть в нашем инстаграмме.
           </p>
-          <button class="content-section__content-button">заказать</button>
+          <button class="content-section__content-button button-js">заказать</button>
         </div>
         <ul class="content-section__slider">
           <li class="content-section__slides">
@@ -145,7 +160,7 @@
       </li>
     </ul>
   </footer>
-  <script src="js/header.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
