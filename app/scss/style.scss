@@ -1,11 +1,11 @@
 @import "core/vars";
 @import "core/fonts";
 
-@import "pages/header";
-@import "pages/main-menu";
-@import "pages/social";
-@import "pages/callback-popup";
-@import "pages/footer";
+@import "components/header";
+@import "components/main-menu";
+@import "components/social";
+@import "components/callback-popup";
+@import "components/footer";
 @import "pages/index";
 
 @import "pages/internal-pages";

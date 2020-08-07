@@ -7,7 +7,7 @@
   margin-bottom: 98px;
   padding: 83px 50px 40px 50px;
 
-  background-image: url("../images/flowers.jpg");
+  background-image: url("/images/flowers.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -16,14 +16,14 @@
     margin-bottom: 98px;
     padding: 284px 100px 55px 101px;
 
-    background-image: url("../images/flowers_ipad.jpg");
+    background-image: url("/images/flowers_ipad.jpg");
   }
 
   @media (min-width: 1366px) {
 
     padding: 150px;
 
-    background-image: url("../images/flowers_desktop.jpg");
+    background-image: url("/images/flowers_desktop.jpg");
     background-size: cover;
 
     &::before {
@@ -35,7 +35,7 @@
       width: 40px;
       height: 56px;
 
-      background: url("../images/mouse.svg") no-repeat;
+      background: url("/images/mouse.svg") no-repeat;
     }
 
     &::after {
@@ -226,7 +226,7 @@
   }
 
   @media (min-width: 1920px) {
-    background: url("../images/catalog-background-text.png") no-repeat 51% 13%;
+    background: url("/images/catalog-background-text.png") no-repeat 51% 13%;
   }
 
   &__title {
@@ -466,13 +466,13 @@
   }
 
   &--wedding-bouquet {
-    background-image: url("../images/bouquet1.jpg");
+    background-image: url("/images/bouquet1.jpg");
   }
 
   &--bouquet {
     display: none;
 
-    background-image: url("../images/bouquet2.jpg");
+    background-image: url("/images/bouquet2.jpg");
 
     @media (min-width: 768px) {
       display: flex;
@@ -491,7 +491,7 @@
   &--compositions {
     display: none;
 
-    background-image: url("../images/bouquet3.jpg");
+    background-image: url("/images/bouquet3.jpg");
 
     @media (min-width: 1366px) {
       display: flex;
@@ -506,7 +506,7 @@
   &--activity {
     display: none;
 
-    background-image: url("../images/bouquet4.jpg");
+    background-image: url("/images/bouquet4.jpg");
 
     @media (min-width: 1920px) {
       display: flex;

@@ -20,7 +20,7 @@ menuBurger.onclick = function () {
 orderButton.onclick = function () {
   popup.classList.add('callback-popup-wrapper--active');
   document.body.style.overflow = "hidden";
-  
+
 }
 
 closeButton.onclick = function (evt) {
