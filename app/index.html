@@ -158,52 +158,6 @@
         </div>
       </div>
       <div class="catalog-section__controls swiper-pagination"></div>
-      <!--
-      <div class="catalog-section__slider">
-        <div class="catalog-section__card card card--wedding-bouquet">
-          <div class="card__title">
-            <hr>
-            <span>01</span>
-          </div>
-          <p class="card__text">букет невесты и свадебное оформление
-            <a href="wedding-page.html" class="card__button">смотреть работы</a>
-          </p>
-        </div>
-        <div class="catalog-section__card card card--bouquet">
-          <div class="card__title">
-            <hr>
-            <span>02</span>
-          </div>
-          <p class="card__text">букеты на торжества
-            <a href="bouquet-page.html" class="card__button">смотреть работы</a>
-          </p>
-        </div>
-        <div class="catalog-section__card card card--compositions">
-          <div class="card__title">
-            <hr>
-            <span>03</span>
-          </div>
-          <p class="card__text">композиции
-            <a href="compositions-page.html" class="card__button">смотреть работы</a>
-          </p>
-        </div>
-        <div class="catalog-section__card card card--activity">
-          <div class="card__title">
-            <hr>
-            <span>04</span>
-          </div>
-          <p class="card__text">оформление мероприятий
-            <a href="activity-page.html" class="card__button">смотреть работы</a>
-          </p>
-        </div>
-      </div>
-      <div class="catalog-section__controls">
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-      </div>
-      -->
     </section>
     <section class="promo">
       <div class="promo__picture">
@@ -287,6 +241,25 @@
         clickable: true,
       },
     });
+  </script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1366: {
+      slidesPerView: 3,
+      spaceBetween: 130,
+    },
+    1920: {
+      slidesPerView: 4,
+    }
+  }
+})
   </script>
 </body>
 </html>

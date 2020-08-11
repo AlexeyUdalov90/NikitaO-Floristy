@@ -275,12 +275,12 @@
 
   &__slider {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     overflow: hidden;
 
     @media (min-width: 900px) {
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     @media (min-width: 1920px) {
@@ -289,7 +289,7 @@
 
     .catalog-section__wrapper {
       margin-bottom: 15px;
-  
+
       @media (min-width: 390px) {
         margin: 0px auto 15px auto;
       }
