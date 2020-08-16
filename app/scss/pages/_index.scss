@@ -293,15 +293,15 @@
       @media (min-width: 390px) {
         margin: 0px auto 15px auto;
       }
-  
+
       @media (min-width: 768px) {
         margin: 0px 28px 24px 0;
       }
-  
+
       @media (min-width: 900px) {
         margin: 0px 80px 24px 0;
       }
-  
+
       @media (min-width: 1920px) {
         margin-right: 50px;
       }
@@ -346,8 +346,9 @@
   }
 }
 
-:root {// Ничего лучше не придумал чтобы отменить синий цвет для пагинации, 
-       //  который зашит в базовых стилях плагина.
+:root {
+  // Ничего лучше не придумал чтобы отменить синий цвет для пагинации, 
+  //  который зашит в базовых стилях плагина.
   --swiper-theme-color: #FFFFFF;
 }
 
