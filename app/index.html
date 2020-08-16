@@ -18,8 +18,37 @@
         alt="Логотип">
     </a>
     <button class="header__menu-burger">меню</button>
+    <nav class="main-menu">
+      <ul class="main-menu__list">
+        <li class="main-menu__item"><a href="index.html" class="main-menu__link">свадебная флористика</a></li>
+        <li class="main-menu__item"><a href="bouquet-page.html" class="main-menu__link">букеты на любые
+            мероприятия</a></li>
+        <li class="main-menu__item"><a href="wedding-page.html" class="main-menu__link">букеты невесты</a></li>
+        <li class="main-menu__item"><a href="compositions-page.html" class="main-menu__link">композиции</a></li>
+        <li class="main-menu__item"><a href="activity-page.html" class="main-menu__link">оформление мероприятий</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main>
+    <div class="callback-popup-wrapper">
+      <div class="callback-popup-overlay"></div>
+      <div class="callback-popup">
+        <img class="callback-popup__image" src="../images/popup-image.jpg" alt="Картинка с цветами">
+        <form class="callback-popup__form callback" action="#" method="POST">
+          <button class="callback__close-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23 23L1 1M1 23L23 1L1 23Z" stroke="white" stroke-opacity="0.3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <h2 class="callback__title">Оставьте свой номер и мы вам перезвоним!</h2>
+          <input class="callback__name-input" type="text" name="name-input" placeholder="Имя">
+          <input class="callback__phone-input" type="phone" name="name-input" placeholder="Телефон">
+          <input class="callback__submit-button" type="submit" value="Позвоните мне">
+        </form>
+      </div>
+    </div>
     <section class="mask-section">
       <h1 class="mask-section__title">Флористика с душой</h1>
       <a href="#catalog-section" class="mask-section__button">смотреть работы</a>
@@ -76,73 +105,67 @@
         </svg>
         смотреть каталог
       </a>
-      <nav class="main-menu hidden">
-        <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="index.html" class="main-menu__link">свадебная флористика</a></li>
-          <li class="main-menu__item"><a href="bouquet-page.html" class="main-menu__link">букеты на любые
-              мероприятия</a></li>
-          <li class="main-menu__item"><a href="wedding-page.html" class="main-menu__link">букеты невесты</a></li>
-          <li class="main-menu__item"><a href="compositions-page.html" class="main-menu__link">композиции</a></li>
-          <li class="main-menu__item"><a href="activity-page.html" class="main-menu__link">оформление мероприятий</a>
-          </li>
-        </ul>
-      </nav>
     </section>
     <section class="catalog-section" id="catalog-section">
       <h2 class="catalog-section__title">каталог услуг</h2>
       <hr>
-      <div class="catalog-section__slider">
-        <div class="catalog-section__card card card--wedding-bouquet">
-          <div class="card__title">
-            <hr>
-            <span>01</span>
+      <div class="catalog-section__slider swiper-container">
+        <div class="catalog-section__wrapper swiper-wrapper">
+          <div class="catalog-section__slide swiper-slide">
+            <div class="card card--wedding-bouquet">
+              <div class="card__title">
+                <hr>
+                <span>01</span>
+              </div>
+              <p class="card__text">букет невесты и свадебное оформление
+                <a href="wedding-page.html" class="card__button">смотреть работы</a>
+              </p>
+            </div>
           </div>
-          <p class="card__text">букет невесты и свадебное оформление
-            <a href="wedding-page.html" class="card__button">смотреть работы</a>
-          </p>
-        </div>
-        <div class="catalog-section__card card card--bouquet">
-          <div class="card__title">
-            <hr>
-            <span>02</span>
+          <div class="catalog-section__slide swiper-slide">
+            <div class="card card--bouquet">
+              <div class="card__title">
+                <hr>
+                <span>02</span>
+              </div>
+              <p class="card__text">букеты на торжества
+                <a href="bouquet-page.html" class="card__button">смотреть работы</a>
+              </p>
+            </div>
           </div>
-          <p class="card__text">букеты на торжества
-            <a href="bouquet-page.html" class="card__button">смотреть работы</a>
-          </p>
-        </div>
-        <div class="catalog-section__card card card--compositions">
-          <div class="card__title">
-            <hr>
-            <span>03</span>
+          <div class="catalog-section__slide swiper-slide">
+            <div class="card card--compositions">
+              <div class="card__title">
+                <hr>
+                <span>03</span>
+              </div>
+              <p class="card__text">композиции
+                <a href="compositions-page.html" class="card__button">смотреть работы</a>
+              </p>
+            </div>
           </div>
-          <p class="card__text">композиции
-            <a href="compositions-page.html" class="card__button">смотреть работы</a>
-          </p>
-        </div>
-        <div class="catalog-section__card card card--activity">
-          <div class="card__title">
-            <hr>
-            <span>04</span>
+          <div class="catalog-section__slide swiper-slide">
+            <div class="card card--activity">
+              <div class="card__title">
+                <hr>
+                <span>04</span>
+              </div>
+              <p class="card__text">оформление мероприятий
+                <a href="activity-page.html" class="card__button">смотреть работы</a>
+              </p>
+            </div>
           </div>
-          <p class="card__text">оформление мероприятий
-            <a href="activity-page.html" class="card__button">смотреть работы</a>
-          </p>
         </div>
       </div>
-      <div class="catalog-section__controls">
-        <hr>
-        <hr>
-        <hr>
-        <hr>
-      </div>
+      <div class="catalog-section__controls swiper-pagination"></div>
     </section>
     <section class="promo">
       <div class="promo__picture">
         <picture class="promo__image">
-          <source srcset="../images/promo-picture.jpg" type="image/jpeg" media="(max-width:767px)">
-          <source srcset="../images/promo-picture_ipad.jpg" type="image/jpeg" media="(max-width:899px)">
-          <source srcset="../images/promo-picture_desktop.jpg" type="image/jpeg" media="(min-width:900px)">
-          <img src="../images/promo-picture.jpg" alt="Промо картинка">
+          <source srcset="/images/promo-picture.jpg" type="image/jpeg" media="(max-width:767px)">
+          <source srcset="/images/promo-picture_ipad.jpg" type="image/jpeg" media="(max-width:899px)">
+          <source srcset="/images/promo-picture_desktop.jpg" type="image/jpeg" media="(min-width:900px)">
+          <img src="/images/promo-picture.jpg" alt="Промо картинка">
         </picture>
       </div>
       <div class="promo__content">
@@ -150,22 +173,7 @@
         <hr>
         <p class="promo__text">При заказе свадебного оформления предоставляется скидка на букет невесты и бутоньерку в
           размере 30%</p>
-        <button class="promo__button" type="submit">заказать оформление</button>
-      </div>
-      <div class="callback-popup hidden">
-        <img class="callback-popup__image" src="../images/popup-image.jpg" alt="Картинка с цветами">
-        <form class="callback-popup__form callback" action="#" method="POST">
-          <button class="callback__close-button">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M23 23L1 1M1 23L23 1L1 23Z" stroke="white" stroke-opacity="0.3" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg>
-          </button>
-          <h2 class="callback__title">Оставьте свой номер и мы вам перезвоним!</h2>
-          <input class="callback__name-input" type="text" name="name-input" placeholder="Имя">
-          <input class="callback__phone-input" type="phone" name="name-input" placeholder="Телефон">
-          <input class="callback__submit-button" type="submit" value="Позвоните мне">
-        </form>
+        <button class="promo__button button-js" type="submit">заказать оформление</button>
       </div>
     </section>
   </main>
@@ -224,8 +232,35 @@
     </ul>
   </footer>
   <script src="js/vendors.js"></script>
-  <script src="js/header.js"></script>
   <script src="js/index.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        1366: {
+          slidesPerView: 3,
+          spaceBetween: 130,
+        },
+        1920: {
+          slidesPerView: 4,
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>

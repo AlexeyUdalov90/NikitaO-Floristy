@@ -18,20 +18,38 @@
         alt="Логотип">
     </a>
     <button class="header__menu-burger">меню</button>
+    <nav class="main-menu">
+      <ul class="main-menu__list">
+        <li class="main-menu__item"><a href="index.html" class="main-menu__link">свадебная флористика</a></li>
+        <li class="main-menu__item"><a href="bouquet-page.html" class="main-menu__link">букеты на любые
+            мероприятия</a></li>
+        <li class="main-menu__item"><a href="wedding-page.html" class="main-menu__link">букеты невесты</a></li>
+        <li class="main-menu__item"><a href="compositions-page.html" class="main-menu__link">композиции</a></li>
+        <li class="main-menu__item"><a href="activity-page.html" class="main-menu__link">оформление мероприятий</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main>
+    <div class="callback-popup-wrapper">
+      <div class="callback-popup-overlay"></div>
+      <div class="callback-popup">
+        <img class="callback-popup__image" src="../images/popup-image.jpg" alt="Картинка с цветами">
+        <form class="callback-popup__form callback" action="#" method="POST">
+          <button class="callback__close-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23 23L1 1M1 23L23 1L1 23Z" stroke="white" stroke-opacity="0.3" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <h2 class="callback__title">Оставьте свой номер и мы вам перезвоним!</h2>
+          <input class="callback__name-input" type="text" name="name-input" placeholder="Имя">
+          <input class="callback__phone-input" type="phone" name="name-input" placeholder="Телефон">
+          <input class="callback__submit-button" type="submit" value="Позвоните мне">
+        </form>
+      </div>
+    </div>
     <section class="content-section">
-      <nav class="main-menu hidden">
-        <ul class="main-menu__list">
-          <li class="main-menu__item"><a href="index.html" class="main-menu__link">свадебная флористика</a></li>
-          <li class="main-menu__item"><a href="bouquet-page.html" class="main-menu__link">букеты на любые
-              мероприятия</a></li>
-          <li class="main-menu__item"><a href="wedding-page.html" class="main-menu__link">букеты невесты</a></li>
-          <li class="main-menu__item"><a href="compositions-page.html" class="main-menu__link">композиции</a></li>
-          <li class="main-menu__item"><a href="activity-page.html" class="main-menu__link">оформление мероприятий</a>
-          </li>
-        </ul>
-      </nav>
       <div class="content-section__main-picture">
         <picture>
           <source srcset="../images/compositions-page.jpg" type="image/jpeg" media="(max-width:499px)">
@@ -47,34 +65,34 @@
             необходимости ставить в вазу, как букеты, потому что цветы питаются при помощи специальной флористической
             губки под названием оазис. Композиции очень удобные для подарка, или оформления мероприятия.
           </p>
-          <button class="content-section__content-button">заказать</button>
+          <button class="content-section__content-button button-js">заказать</button>
         </div>
         <ul class="content-section__slider">
           <li class="content-section__slides">
             <picture>
-              <source srcset="../images/internal3-slider-1.jpg" type="image/jpeg" media="(max-width:767px)">
-              <source srcset="../images/internal3-slider-1-desktop.jpg" type="image/jpeg" media="(min-width:768px)">
-              <img src="../images/internal3-slider-1.jpg" alt="Фиолетовый букет цветов">
+              <source srcset="/images/internal3-slider-1.jpg" type="image/jpeg" media="(max-width:767px)">
+              <source srcset="/images/internal3-slider-1-desktop.jpg" type="image/jpeg" media="(min-width:768px)">
+              <img src="/images/internal3-slider-1.jpg" alt="Фиолетовый букет цветов">
             </picture>
           </li>
           <li class="content-section__slides">
             <picture>
-              <source srcset="../images/internal3-slider-2.jpg" type="image/jpeg" media="(max-width:767px)">
-              <source srcset="../images/internal3-slider-2-desktop.jpg" type="image/jpeg" media="(min-width:768px)">
-              <img src="../images/internal3-slider-2.jpg" alt="Фиолетовый букет цветов">
+              <source srcset="/images/internal3-slider-2.jpg" type="image/jpeg" media="(max-width:767px)">
+              <source srcset="/images/internal3-slider-2-desktop.jpg" type="image/jpeg" media="(min-width:768px)">
+              <img src="/images/internal3-slider-2.jpg" alt="Фиолетовый букет цветов">
             </picture>
           </li>
           <li class="content-section__slides">
             <picture>
-              <source srcset="../images/internal3-slider-3.jpg" type="image/jpeg" media="(max-width:767px)">
-              <source srcset="../images/internal3-slider-3-desktop.jpg" type="image/jpeg" media="(min-width:768px)">
-              <img src="../images/internal3-slider-3.jpg" alt="Фиолетовый букет цветов">
+              <source srcset="/images/internal3-slider-3.jpg" type="image/jpeg" media="(max-width:767px)">
+              <source srcset="/images/internal3-slider-3-desktop.jpg" type="image/jpeg" media="(min-width:768px)">
+              <img src="/images/internal3-slider-3.jpg" alt="Фиолетовый букет цветов">
             </picture>
           </li>
           <li class="content-section__slides">
             <picture>
-              <source srcset="../images/internal3-slider-4-desktop.jpg" type="image/jpeg" media="(min-width:320px)">
-              <img src="../images/internal3-slider-4-desktop.jpg" alt="Фиолетовый букет цветов">
+              <source srcset="/images/internal3-slider-4-desktop.jpg" type="image/jpeg" media="(min-width:320px)">
+              <img src="/images/internal3-slider-4-desktop.jpg" alt="Фиолетовый букет цветов">
             </picture>
           </li>
         </ul>
@@ -145,7 +163,7 @@
       </li>
     </ul>
   </footer>
-  <script src="js/header.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>

@@ -7,7 +7,7 @@
   margin-bottom: 98px;
   padding: 83px 50px 40px 50px;
 
-  background-image: url("../images/flowers.jpg");
+  background-image: url("/images/flowers.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -16,14 +16,14 @@
     margin-bottom: 98px;
     padding: 284px 100px 55px 101px;
 
-    background-image: url("../images/flowers_ipad.jpg");
+    background-image: url("/images/flowers_ipad.jpg");
   }
 
   @media (min-width: 1366px) {
 
     padding: 150px;
 
-    background-image: url("../images/flowers_desktop.jpg");
+    background-image: url("/images/flowers_desktop.jpg");
     background-size: cover;
 
     &::before {
@@ -35,7 +35,7 @@
       width: 40px;
       height: 56px;
 
-      background: url("../images/mouse.svg") no-repeat;
+      background: url("/images/mouse.svg") no-repeat;
     }
 
     &::after {
@@ -226,7 +226,7 @@
   }
 
   @media (min-width: 1920px) {
-    background: url("../images/catalog-background-text.png") no-repeat 51% 13%;
+    background: url("/images/catalog-background-text.png") no-repeat 51% 13%;
   }
 
   &__title {
@@ -275,52 +275,51 @@
 
   &__slider {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 
     overflow: hidden;
 
     @media (min-width: 900px) {
-      justify-content: center;
+      justify-content: flex-start;
     }
 
     @media (min-width: 1920px) {
       margin-bottom: 145px;
     }
-  }
 
-  &__card {
-    margin-bottom: 15px;
+    .catalog-section__wrapper {
+      margin-bottom: 15px;
 
-    @media (min-width: 390px) {
-      margin: 0px auto 15px auto;
-    }
+      @media (min-width: 390px) {
+        margin: 0px auto 15px auto;
+      }
 
-    @media (min-width: 768px) {
-      margin: 0px 28px 24px 0;
-    }
+      @media (min-width: 768px) {
+        margin: 0px 28px 24px 0;
+      }
 
-    @media (min-width: 900px) {
-      margin: 0px 80px 24px 0;
-    }
+      @media (min-width: 900px) {
+        margin: 0px 80px 24px 0;
+      }
 
-    @media (min-width: 1920px) {
-      margin-right: 50px;
+      @media (min-width: 1920px) {
+        margin-right: 50px;
+      }
     }
   }
 
   &__controls {
-    display: flex;
-    max-width: 330px;
+    position: relative;
 
-    @media (min-width: 390px) {
-      margin: 0 auto;
-    }
+    display: flex;
+    margin: 0 auto;
+    max-width: 288px;
 
     @media (min-width: 768px) {
       width: 170px;
 
-      hr:nth-of-type(3),
-      hr:nth-of-type(4) {
+      span:nth-of-type(3),
+      span:nth-of-type(4) {
         display: none;
       }
 
@@ -329,27 +328,35 @@
       }
     }
 
-    hr {
+    .swiper-pagination-bullet {
       margin-right: 12.52px;
       width: 62.61px;
 
       border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 0;
 
       &:last-of-type {
         margin-right: 0;
       }
 
-      &:hover {
-        border-color: $font-color;
+      &:focus {
+        outline: none;
       }
     }
   }
+}
+
+:root {
+  // Ничего лучше не придумал чтобы отменить синий цвет для пагинации, 
+  //  который зашит в базовых стилях плагина.
+  --swiper-theme-color: #FFFFFF;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 auto;
   padding: 23px 0 0 20px;
   width: 288px;
   height: 392px;
@@ -466,16 +473,15 @@
   }
 
   &--wedding-bouquet {
-    background-image: url("../images/bouquet1.jpg");
+    background-image: url("/images/bouquet1.jpg");
   }
 
   &--bouquet {
-    display: none;
+    display: flex;
 
-    background-image: url("../images/bouquet2.jpg");
+    background-image: url("/images/bouquet2.jpg");
 
     @media (min-width: 768px) {
-      display: flex;
       margin-right: 0;
     }
 
@@ -489,12 +495,11 @@
   }
 
   &--compositions {
-    display: none;
+    display: flex;
 
-    background-image: url("../images/bouquet3.jpg");
+    background-image: url("/images/bouquet3.jpg");
 
     @media (min-width: 1366px) {
-      display: flex;
       margin-right: 0;
     }
 
@@ -504,12 +509,11 @@
   }
 
   &--activity {
-    display: none;
+    display: flex;
 
-    background-image: url("../images/bouquet4.jpg");
+    background-image: url("/images/bouquet4.jpg");
 
     @media (min-width: 1920px) {
-      display: flex;
       margin-right: 0;
     }
   }
